@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://t.me/dwertyfa">Telegram ↗</a> &nbsp; · &nbsp;
-  <a href="https://github.com/dwertyfa288/dwertyfa">Портфолио ↗</a> &nbsp; · &nbsp;
+  <a href="https://dwertyfa288.github.io/dwertyfa/">Портфолио ↗</a> &nbsp; · &nbsp;
   <a href="https://github.com/SpherePrime">SpherePrime ↗</a>
 </p>
 
@@ -20,7 +20,7 @@
 
 <a href="https://github.com/dwertyfa288/astra-interject"><img src="./assets/interject.svg" width="100%" alt="Astra Interject — продолжение диалога после ответа Astra без повторного триггерного слова. Открыть репозиторий." /></a>
 
-<a href="https://github.com/dwertyfa288/dwertyfa"><img src="./assets/portfolio.svg" width="100%" alt="dwertyfa portfolio — интерактивное портфолио на Next.js, React и Three.js. Открыть репозиторий." /></a>
+<a href="https://dwertyfa288.github.io/dwertyfa/"><img src="./assets/portfolio.svg" width="100%" alt="dwertyfa portfolio — интерактивное портфолио на Next.js, React и Three.js. Открыть репозиторий." /></a>
 
 <br />
 
