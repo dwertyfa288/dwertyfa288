@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="138" viewBox="0 0 1100 138" role="img" aria-labelledby="title">
+<title id="title">Есть идея? Дадим ей форму. Telegram: @dwertyfa</title>
+<defs>
+ <linearGradient id="accent"><stop stop-color="#bba7ff"/><stop offset="1" stop-color="#88f3cf"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#7359c4" stop-opacity=".35"/><stop offset="1" stop-color="#0c1018" stop-opacity="0"/></radialGradient>
+ <linearGradient id="panel" x2="1" y2="1"><stop stop-color="#141925"/><stop offset="1" stop-color="#0b1018"/></linearGradient>
+ <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4"/></filter>
+</defs>
+<style>
+text {font-family: 'Segoe UI', Arial, sans-serif;}
+.mono {font-family: Consolas, 'Courier New', monospace;}
+.orbit {stroke-dasharray:90 640; animation: orbit 14s linear infinite;}
+.reverse {animation-direction:reverse; animation-duration:21s;}
+.pulse {animation:pulse 5s ease-in-out infinite;}
+.flow {stroke-dasharray:28 190; animation:flow 9s linear infinite;}
+@keyframes orbit {to {stroke-dashoffset:-730;}}
+@keyframes flow {to {stroke-dashoffset:-436;}}
+@keyframes pulse {0%,100% {opacity:.35;} 50% {opacity:1;}}
+@media (prefers-reduced-motion:reduce) {.orbit,.pulse,.flow {animation:none;}}
+</style>
+
+<rect x=".5" y=".5" width="1099" height="137" rx="17" fill="#0b1018" stroke="#2b3041"/>
+<path d="M30 95H395l22-22 26 38 31-64 33 77 29-47 18 18h516" stroke="#313247" fill="none"/>
+<path class="flow" d="M30 95H395l22-22 26 38 31-64 33 77 29-47 18 18h516" stroke="url(#accent)" stroke-width="2" fill="none"/>
+<text x="30" y="42" fill="#d9daeb" font-size="20">Есть идея? Дадим ей форму.</text>
+<text x="1070" y="42" fill="#88f3cf" font-size="15" class="mono" text-anchor="end">@dwertyfa ↗</text>
+
+</svg>
