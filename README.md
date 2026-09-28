@@ -12,7 +12,7 @@
 
 Создаю сайты, плагины и интеграции. Мне интересно соединять выразительный интерфейс с полезной механикой: от **3D и анимаций в вебе** до **голосового управления Telegram** и естественного диалога с Astra.
 
-Мой основной стек в публичных проектах — **TypeScript, React и Next.js**. Для объёмной графики использую **Three.js**, а для расширения голосового помощника — **Astra Plugin SDK**.
+Мой стек — **TypeScript, React, Next.js, Go, Rust, Tauri и Python**. Для объёмной графики использую **Three.js**, а для расширения голосового помощника — **Astra Plugin SDK**.
 
 <br />
 
@@ -30,12 +30,13 @@
 
 Работы из моего публичного портфолио:
 
-| Проект | Что внутри |
-| :--- | :--- |
-| [Nova Prestige ↗](https://novaprestige.ru/) | Промо-сайт жилого дома: атмосфера, адаптив и анимации. |
-| [Roxy Boost ↗](https://roxyvpn.ru/) | VPN-продукт: инфраструктура, приложение и сайт. |
-| [danek montage ↗](https://fazedanek-hub.github.io/danekmontage/) | Портфолио видеомонтажёра с акцентом на движение. |
-| [Hey Ksusha ↗](https://heyksusha.ru/intensive) | Лендинг интенсива с записью и платёжной интеграцией. |
+<a href="https://novaprestige.ru/"><img src="./assets/nova.svg" width="100%" alt="Nova Prestige — промо-сайт жилого дома: атмосфера, адаптив и анимации. Открыть сайт." /></a>
+
+<a href="https://roxyvpn.ru/"><img src="./assets/roxy.svg" width="100%" alt="Roxy Boost — VPN-продукт: инфраструктура, приложение и сайт. Открыть сайт." /></a>
+
+<a href="https://fazedanek-hub.github.io/danekmontage/"><img src="./assets/danek.svg" width="100%" alt="danek montage — портфолио видеомонтажёра с акцентом на движение. Открыть сайт." /></a>
+
+<a href="https://heyksusha.ru/intensive"><img src="./assets/ksusha.svg" width="100%" alt="Hey Ksusha — лендинг интенсива с записью и платёжной интеграцией. Открыть сайт." /></a>
 
 <br />
 
@@ -43,11 +44,11 @@
 
 Состою в [**SpherePrime**](https://github.com/SpherePrime). Среди публичных проектов организации:
 
-| Проект | Направление | Язык репозитория |
-| :--- | :--- | :--- |
-| [PrimeProxy](https://github.com/SpherePrime/PrimeProxy) | Локальный MTProto-прокси для Telegram с WebSocket-транспортом. | Python |
-| [PrimeAI](https://github.com/SpherePrime/PrimeAi) | AI-провайдер для Astra с маршрутизацией запросов через Router API. | TypeScript |
-| [Prime CLI](https://github.com/SpherePrime/CLI) | Терминальный AI-ассистент для работы с кодом, MCP и несколькими моделями. | Go |
+<a href="https://github.com/SpherePrime/PrimeProxy"><img src="./assets/primeproxy.svg" width="100%" alt="PrimeProxy — локальный MTProto-прокси для Telegram с WebSocket-транспортом. Python. Открыть репозиторий SpherePrime." /></a>
+
+<a href="https://github.com/SpherePrime/PrimeAi"><img src="./assets/primeai.svg" width="100%" alt="PrimeAI — AI-провайдер для Astra с маршрутизацией запросов через Router API. TypeScript. Открыть репозиторий SpherePrime." /></a>
+
+<a href="https://github.com/SpherePrime/CLI"><img src="./assets/primecli.svg" width="100%" alt="Prime CLI — терминальный AI-ассистент для работы с кодом, MCP и несколькими моделями. Go. Открыть репозиторий SpherePrime." /></a>
 
 <br />
 

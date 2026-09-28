@@ -58,12 +58,9 @@ svg('hero.svg', 440, f'''
 <text x="854" y="227" text-anchor="middle" fill="#e3d9ff" font-size="62" font-weight="600">d<tspan fill="#88f3cf">.</tspan></text>
 <text x="854" y="382" text-anchor="middle" fill="#828aa2" font-size="12" class="mono" letter-spacing="2">IDEAS IN ORBIT</text>
 <path d="M46 361H650" stroke="#292e40"/>
-<circle cx="51" cy="391" r="4" fill="#88f3cf"/>
-<text x="66" y="396" fill="#b0b9cc" font-size="14" class="mono">TYPESCRIPT</text>
-<text x="198" y="396" fill="#586075" font-size="14">/</text>
-<text x="224" y="396" fill="#b0b9cc" font-size="14" class="mono">REACT &amp; NEXT.JS</text>
-<text x="416" y="396" fill="#586075" font-size="14">/</text>
-<text x="442" y="396" fill="#b0b9cc" font-size="14" class="mono">ASTRA PLUGINS</text>
+<circle cx="51" cy="385" r="4" fill="#88f3cf"/>
+<text x="66" y="390" fill="#b0b9cc" font-size="15" class="mono">TYPESCRIPT / REACT / NEXT.JS</text>
+<text x="66" y="416" fill="#bba7ff" font-size="15" class="mono">GO / RUST / TAURI / PYTHON</text>
 ''', 'dwertyfa — full-stack, голосовые интерфейсы и интеграции. От идеи до живого продукта.')
 
 def card(filename, number, label, name, description, tags, color, icon):
@@ -72,6 +69,20 @@ def card(filename, number, label, name, description, tags, color, icon):
         art = f'<g class="pulse">{bars}</g>'
     elif icon == 'telegram':
         art = f'<path d="m880 97 117-40-31 104-34-31-23 17 3-35 65-39-77 31Z" fill="none" stroke="{color}" stroke-width="2" stroke-linejoin="round"/><path class="flow" d="M838 179h181" stroke="{color}" stroke-width="2"/>'
+    elif icon == 'building':
+        art = f'<g fill="none" stroke="{color}"><path d="M873 161V79l42-24v106m0-62 39-23v85m0-44 49-20v64M860 162h156" stroke-width="2"/><path d="M886 92v53m15-63v63m29-29v29m13-37v37m27-17v17m17-22v22" opacity=".4"/><path class="flow" d="M873 161V79l42-24v106h88V97l-49 20" stroke-width="3"/></g>'
+    elif icon == 'shield':
+        art = f'<path d="m941 48 65 24v37c0 26-34 47-65 60-31-13-65-34-65-60V72Z" fill="none" stroke="{color}" stroke-width="2"/><path class="pulse" d="m919 88 38 0-19 26h24l-44 38 14-30h-21Z" fill="{color}"/><ellipse class="orbit" cx="941" cy="108" rx="88" ry="31" fill="none" stroke="{color}" opacity=".5"/>'
+    elif icon == 'film':
+        art = f'<rect x="866" y="61" width="151" height="92" rx="8" fill="none" stroke="{color}"/><path d="M866 81h151m-151 52h151m-132-72v20m25-20v20m25-20v20m25-20v20m25-20v20m-100 52v20m25-20v20m25-20v20m25-20v20m25-20v20" stroke="{color}" opacity=".5"/><path class="pulse" d="m932 93 24 15-24 15Z" fill="{color}"/>'
+    elif icon == 'spark':
+        art = f'<g transform="translate(942 107)" fill="none" stroke="{color}"><circle r="61" opacity=".2"/><path class="pulse" d="M0-51 12-13 51 0 12 13 0 51-12 13-51 0-12-13Z" stroke-width="2"/><circle class="orbit reverse" r="74" stroke-width="2"/><circle r="5" fill="{color}"/></g>'
+    elif icon == 'proxy':
+        art = f'<path d="M874 106h135" stroke="{color}" opacity=".3"/><path class="flow" d="M874 106h135" stroke="{color}" stroke-width="3"/><rect x="861" y="82" width="35" height="48" rx="7" fill="#141925" stroke="{color}"/><rect x="990" y="82" width="35" height="48" rx="7" fill="#141925" stroke="{color}"/><circle class="pulse" cx="943" cy="106" r="15" fill="#141925" stroke="{color}"/><path d="M871 117h15m114 0h15" stroke="{color}"/>'
+    elif icon == 'ai':
+        art = f'<g fill="none" stroke="{color}"><path d="M877 62 942 106 1007 62M877 150l65-44 65 44M877 106h130" opacity=".45"/><circle class="pulse" cx="942" cy="106" r="24"/><circle cx="942" cy="106" r="10"/><circle cx="877" cy="62" r="6"/><circle cx="1007" cy="62" r="6"/><circle cx="877" cy="150" r="6"/><circle cx="1007" cy="150" r="6"/><path class="flow" d="M877 62 942 106 1007 150" stroke-width="2"/></g>'
+    elif icon == 'cli':
+        art = f'<rect x="866" y="58" width="154" height="99" rx="9" fill="none" stroke="{color}"/><path d="M866 80h154m-137-12h3m8 0h3m8 0h3" stroke="{color}" opacity=".5"/><path d="m887 101 13 11-13 11" fill="none" stroke="{color}" stroke-width="2"/><path class="pulse" d="M913 124h25" stroke="{color}" stroke-width="3"/>'
     else:
         art = f'<g transform="translate(942 105) rotate(-24)"><ellipse rx="71" ry="31" fill="none" stroke="{color}" opacity=".4"/><ellipse class="orbit" rx="71" ry="31" fill="none" stroke="{color}" stroke-width="2"/><circle r="34" fill="none" stroke="{color}"/><path d="M-34 0h68M0-34v68" stroke="{color}" opacity=".5"/></g>'
     svg(filename, 208, f'''
@@ -89,6 +100,13 @@ def card(filename, number, label, name, description, tags, color, icon):
 card('telegram.svg', '01', 'VOICE × MESSAGING', 'TG for Astra', 'Telegram, который можно слушать. И отвечать голосом.', 'TYPESCRIPT   /   TELEGRAM   /   ASTRA', '#88f3cf', 'telegram')
 card('interject.svg', '02', 'NATURAL CONVERSATION', 'Astra Interject', 'Продолжение диалога без повторного триггерного слова.', 'TYPESCRIPT   /   AUDIO   /   ASTRA', '#bba7ff', 'voice')
 card('portfolio.svg', '03', 'WEB × MOTION', 'dwertyfa / portfolio', 'Интерактивное портфолио с 3D-графикой и анимациями.', 'NEXT.JS   /   REACT   /   THREE.JS', '#f2b99b', 'web')
+card('nova.svg', '01', 'WEB / ARCHITECTURE', 'Nova Prestige', 'Промо-сайт жилого дома с атмосферой и вниманием к деталям.', 'REAL ESTATE   /   RESPONSIVE   /   MOTION', '#88f3cf', 'building')
+card('roxy.svg', '02', 'WEB / DIGITAL PRODUCT', 'Roxy Boost', 'VPN-продукт: от инфраструктуры до приложения и сайта.', 'FULL-STACK   /   VPN   /   INFRASTRUCTURE', '#bba7ff', 'shield')
+card('danek.svg', '03', 'WEB / CREATIVE PORTFOLIO', 'danek montage', 'Портфолио видеомонтажёра, в котором движение задаёт ритм.', 'REACT   /   MOTION UI   /   RESPONSIVE', '#f2b99b', 'film')
+card('ksusha.svg', '04', 'WEB / EDUCATION', 'Hey Ksusha', 'Лендинг интенсива: выразительная подача, запись и оплата.', 'LANDING PAGE   /   ART DIRECTION   /   PAYMENTS', '#edbddd', 'spark')
+card('primeproxy.svg', '01', 'SPHEREPRIME / NETWORK', 'PrimeProxy', 'Локальный MTProto-прокси для Telegram через WebSocket.', 'PYTHON   /   MTPROTO   /   WEBSOCKET', '#88f3cf', 'proxy')
+card('primeai.svg', '02', 'SPHEREPRIME / INTELLIGENCE', 'PrimeAI', 'AI-провайдер для Astra с маршрутизацией запросов к моделям.', 'TYPESCRIPT   /   ROUTER API   /   ASTRA', '#bba7ff', 'ai')
+card('primecli.svg', '03', 'SPHEREPRIME / DEVELOPER TOOLS', 'Prime CLI', 'AI-ассистент для кода — прямо в терминале.', 'GO   /   MCP   /   MULTI-MODEL', '#f2b99b', 'cli')
 
 svg('footer.svg', 138, '''
 <rect x=".5" y=".5" width="1099" height="137" rx="17" fill="#0b1018" stroke="#2b3041"/>
@@ -97,4 +115,4 @@ svg('footer.svg', 138, '''
 <text x="30" y="42" fill="#d9daeb" font-size="20">Есть идея? Дадим ей форму.</text>
 <text x="1070" y="42" fill="#88f3cf" font-size="15" class="mono" text-anchor="end">@dwertyfa ↗</text>
 ''', 'Есть идея? Дадим ей форму. Telegram: @dwertyfa')
-print('Generated 5 SVG assets.')
+print('Generated 12 SVG assets.')

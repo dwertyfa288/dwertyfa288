@@ -45,11 +45,8 @@ text {font-family: 'Segoe UI', Arial, sans-serif;}
 <text x="854" y="227" text-anchor="middle" fill="#e3d9ff" font-size="62" font-weight="600">d<tspan fill="#88f3cf">.</tspan></text>
 <text x="854" y="382" text-anchor="middle" fill="#828aa2" font-size="12" class="mono" letter-spacing="2">IDEAS IN ORBIT</text>
 <path d="M46 361H650" stroke="#292e40"/>
-<circle cx="51" cy="391" r="4" fill="#88f3cf"/>
-<text x="66" y="396" fill="#b0b9cc" font-size="14" class="mono">TYPESCRIPT</text>
-<text x="198" y="396" fill="#586075" font-size="14">/</text>
-<text x="224" y="396" fill="#b0b9cc" font-size="14" class="mono">REACT &amp; NEXT.JS</text>
-<text x="416" y="396" fill="#586075" font-size="14">/</text>
-<text x="442" y="396" fill="#b0b9cc" font-size="14" class="mono">ASTRA PLUGINS</text>
+<circle cx="51" cy="385" r="4" fill="#88f3cf"/>
+<text x="66" y="390" fill="#b0b9cc" font-size="15" class="mono">TYPESCRIPT / REACT / NEXT.JS</text>
+<text x="66" y="416" fill="#bba7ff" font-size="15" class="mono">GO / RUST / TAURI / PYTHON</text>
 
 </svg>
