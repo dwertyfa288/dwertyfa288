@@ -115,4 +115,33 @@ svg('footer.svg', 138, '''
 <text x="30" y="42" fill="#d9daeb" font-size="20">Есть идея? Дадим ей форму.</text>
 <text x="1070" y="42" fill="#88f3cf" font-size="15" class="mono" text-anchor="end">@dwertyfa ↗</text>
 ''', 'Есть идея? Дадим ей форму. Telegram: @dwertyfa')
-print('Generated 12 SVG assets.')
+directions = ''
+for x, color, title, line1, line2 in [
+    (36, '#88f3cf', 'Веб и интерфейсы', 'Сайты с характером,', '3D и анимации.'),
+    (390, '#bba7ff', 'Голос и диалог', 'Плагины для Astra', 'и управление Telegram.'),
+    (744, '#f2b99b', 'Интеграции', 'Связываю сервисы', 'в удобные инструменты.'),
+]:
+    directions += f'''<rect x="{x}" y="164" width="320" height="120" rx="12" fill="#141a26" stroke="#282f40"/>
+<circle cx="{x+21}" cy="188" r="3" fill="{color}"/>
+<text x="{x+35}" y="195" fill="{color}" font-size="23" font-weight="600">{title}</text>
+<text x="{x+20}" y="232" fill="#b5bfd2" font-size="21">{line1}</text>
+<text x="{x+20}" y="260" fill="#b5bfd2" font-size="21">{line2}</text>'''
+
+chips = ''
+x = 36
+for label, width in [('TypeScript', 156), ('React', 110), ('Next.js', 131), ('Go', 80), ('Rust', 97), ('Tauri', 104), ('Python', 122)]:
+    chips += f'<rect x="{x}" y="342" width="{width}" height="42" rx="9" fill="#171b2b" stroke="#39364f"/><text x="{x+width/2}" y="370" text-anchor="middle" fill="#ded6f5" font-size="21" class="mono">{label}</text>'
+    x += width + 13
+svg('about.svg', 460, f'''
+<rect x=".5" y=".5" width="1099" height="459" rx="18" fill="url(#panel)" stroke="#2b3041"/>
+<text x="36" y="36" fill="#bba7ff" font-size="13" class="mono" letter-spacing="2">BEHIND THE CODE</text>
+<text x="36" y="91" fill="#f3f0ff" font-size="42" font-weight="600">Привет, я dwertyfa<tspan fill="#88f3cf">.</tspan></text>
+<text x="36" y="132" fill="#bdc5d6" font-size="24">Создаю сайты, плагины и интеграции, которыми удобно пользоваться.</text>
+{directions}
+<text x="36" y="322" fill="#939eb6" font-size="14" class="mono" letter-spacing="2">МОЙ СТЕК</text>
+{chips}
+<text x="36" y="427" fill="#939eb6" font-size="20">Графика <tspan fill="#88f3cf">/ Three.js</tspan></text>
+<text x="344" y="427" fill="#939eb6" font-size="20">Голосовые плагины <tspan fill="#bba7ff">/ Astra Plugin SDK</tspan></text>
+<path class="flow" d="M842 421h222" stroke="url(#accent)" stroke-width="2"/>
+''', 'Привет, я dwertyfa. Создаю сайты, плагины и интеграции. Веб: 3D и анимации. Голос: Astra и Telegram. Стек: TypeScript, React, Next.js, Go, Rust, Tauri, Python. Также Three.js и Astra Plugin SDK.')
+print('Generated 13 SVG assets.')

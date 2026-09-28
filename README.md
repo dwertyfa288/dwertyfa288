@@ -8,11 +8,9 @@
   <a href="https://github.com/SpherePrime">SpherePrime ↗</a>
 </p>
 
-### Привет, я dwertyfa.
-
-Создаю сайты, плагины и интеграции. Мне интересно соединять выразительный интерфейс с полезной механикой: от **3D и анимаций в вебе** до **голосового управления Telegram** и естественного диалога с Astra.
-
-Мой стек — **TypeScript, React, Next.js, Go, Rust, Tauri и Python**. Для объёмной графики использую **Three.js**, а для расширения голосового помощника — **Astra Plugin SDK**.
+<p align="center">
+  <img src="./assets/about.svg" width="100%" alt="Привет, я dwertyfa. Создаю сайты, плагины и интеграции. Веб: 3D и анимации. Голос: Astra и Telegram. Мой стек: TypeScript, React, Next.js, Go, Rust, Tauri и Python. Также использую Three.js и Astra Plugin SDK." />
+</p>
 
 <br />
 
