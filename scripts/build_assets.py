@@ -3,6 +3,8 @@ from pathlib import Path
 from html import escape
 import math
 import base64
+import hashlib
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / 'assets'
@@ -150,3 +152,13 @@ svg('about.svg', 460, f'''
 <path class="flow" d="M842 421h222" stroke="url(#accent)" stroke-width="2"/>
 ''', 'Привет, я dwertyfa. Создаю сайты, плагины и интеграции. Веб: 3D и анимации. Голос: Astra и Telegram. Стек: TypeScript, React, Next.js, Go, Rust, Tauri, Python. Также Three.js и Astra Plugin SDK.')
 print('Generated 13 SVG assets.')
+
+# Change each image URL with its content so GitHub cannot reuse stale images.
+readme_path = ROOT / 'README.md'
+readme = readme_path.read_text(encoding='utf-8')
+def version_asset(match):
+    path = match.group(1)
+    digest = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:12]
+    return f'src="{path}?v={digest}"'
+readme = re.sub(r'src="(\./assets/[^"?]+\.svg)(?:\?[^\"]*)?"', version_asset, readme)
+readme_path.write_text(readme, encoding='utf-8')
