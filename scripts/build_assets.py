@@ -35,7 +35,6 @@ text{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif}
 @keyframes sheen{0%{transform:translateX(0);opacity:0}12%{opacity:.9}58%{opacity:.5}100%{transform:translateX(1780px);opacity:0}}
 @keyframes ripple{0%{transform:scale(.5);opacity:0}14%{opacity:.55}100%{transform:scale(1.75);opacity:0}}
 @keyframes dash{to{stroke-dashoffset:-1000}}
-@keyframes dashBack{to{stroke-dashoffset:1000}}
 @keyframes flow{to{stroke-dashoffset:-240}}
 @keyframes eq{0%,100%{transform:scaleY(.28);opacity:.55}50%{transform:scaleY(1);opacity:1}}
 @keyframes twinkle{0%,100%{opacity:.14;transform:scale(.55)}50%{opacity:1;transform:scale(1.3)}}
@@ -56,7 +55,6 @@ text{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif}
 .sheen{opacity:0;animation:sheen 11s cubic-bezier(.4,0,.2,1) infinite}
 .ripple{animation:ripple 4.4s cubic-bezier(.2,.6,.3,1) infinite}
 .dash{stroke-dasharray:150 850;animation:dash 13s linear infinite}
-.dash-rev{stroke-dasharray:70 930;animation:dashBack 17s linear infinite}
 .flow{stroke-dasharray:24 216;animation:flow 3.4s linear infinite}
 .eq{animation:eq 1.9s cubic-bezier(.4,0,.2,1) infinite}
 .twinkle{animation:twinkle 4.2s ease-in-out infinite}
@@ -81,6 +79,9 @@ def svg(name, height, body, title, accent=VIOLET, second=MINT, extra_defs='', ra
  </linearGradient>
  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
   <stop offset="0" stop-color="{accent}"/><stop offset="1" stop-color="{second}"/>
+ </linearGradient>
+ <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="{accent}"/><stop offset=".5" stop-color="{second}"/><stop offset="1" stop-color="{accent}"/>
  </linearGradient>
  <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
@@ -142,12 +143,11 @@ def backdrop(height, phase=0.0, grid=True, radius=22):
 
 
 def frame(height, accent, second, radius=22, phase=0.0):
-    """Static gradient rim plus two counter-running light segments."""
+    """Static gradient rim, one travelling light segment, soft inner highlight."""
     return f'''
-<rect x="1" y="1" width="{W - 2}" height="{height - 2}" rx="{radius}" fill="none" stroke="url(#accent)" stroke-opacity=".2" stroke-width="1.4"/>
-<rect class="dash" style="animation-delay:-{phase:.1f}s" x="1" y="1" width="{W - 2}" height="{height - 2}" rx="{radius}" pathLength="1000" fill="none" stroke="url(#accent)" stroke-width="1.7" stroke-linecap="round"/>
-<rect class="dash-rev" style="animation-delay:-{phase + 5:.1f}s" x="1" y="1" width="{W - 2}" height="{height - 2}" rx="{radius}" pathLength="1000" fill="none" stroke="{second}" stroke-width="1.2" stroke-linecap="round" opacity=".8"/>
-<rect x="{radius + 26}" y="1.6" width="{W - (radius + 26) * 2}" height="1.3" rx=".6" fill="url(#accent)" opacity=".45"/>'''
+<rect x="1" y="1" width="{W - 2}" height="{height - 2}" rx="{radius}" fill="none" stroke="url(#rim)" stroke-opacity=".2" stroke-width="1.4"/>
+<rect class="dash" style="animation-delay:-{phase:.1f}s" x="1" y="1" width="{W - 2}" height="{height - 2}" rx="{radius}" pathLength="1000" fill="none" stroke="url(#rim)" stroke-width="1.7" stroke-linecap="round"/>
+<rect x="{radius + 26}" y="1.6" width="{W - (radius + 26) * 2}" height="1.3" rx=".65" fill="url(#rim)" opacity=".5"/>'''
 
 
 def section(filename, number, title, caption, accent, second):
@@ -458,8 +458,8 @@ for index, label in enumerate(['TypeScript', 'React', 'Next.js', 'Go', 'Rust', '
     x += width + 14
 
 wave = ''.join(
-    f'<rect class="fx eq" style="animation-delay:-{i * 0.09:.2f}s" x="{576 + i * 11}" y="{494 - (12 + 30 * abs(math.sin(i * 0.6))) / 2:.0f}" '
-    f'width="4.5" height="{12 + 30 * abs(math.sin(i * 0.6)):.0f}" rx="2.2" fill="{VIOLET}" opacity="{0.35 + (i % 4) * 0.15:.2f}"/>' for i in range(43))
+    f'<rect class="fx eq" style="animation-delay:-{i * 0.11:.2f}s" x="{792 + i * 11}" y="{490 - (10 + 30 * abs(math.sin(i * 0.62))) / 2:.0f}" '
+    f'width="4.5" height="{10 + 30 * abs(math.sin(i * 0.62)):.0f}" rx="2.2" fill="{VIOLET}" opacity="{0.35 + (i % 4) * 0.15:.2f}"/>' for i in range(22))
 
 svg('about.svg', 540, f'''
 {backdrop(540, phase=0.8, radius=22)}
@@ -487,8 +487,9 @@ svg('about.svg', 540, f'''
 </g>
 <g class="rise" style="animation-delay:-1.08s">
  <rect x="556" y="452" width="504" height="76" rx="14" fill="#0f1522" fill-opacity=".82" stroke="#232b3e"/>
- <text x="576" y="494" fill="#9aa5bd" font-size="19">Голосовые плагины</text>
- <text x="576" y="516" fill="{VIOLET}" font-size="19" font-weight="600" class="mono">Astra Plugin SDK</text>
+ <text x="578" y="486" fill="#9aa5bd" font-size="19">Голосовые плагины</text>
+ <text x="578" y="510" fill="{VIOLET}" font-size="19" font-weight="600" class="mono">Astra Plugin SDK</text>
+ <path d="M770 468v44" stroke="#dfe6ff" stroke-opacity=".07"/>
  {wave}
 </g>
 {frame(540, VIOLET, MINT, 22, 0.8)}

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1100" height="216" viewBox="0 0 1100 216" role="img" aria-labelledby="asset-title">
-<title id="asset-title">dwertyfa / portfolio: Интерактивное портфолио с 3D-графикой и анимациями.</title>
+<title id="asset-title">Prime CLI: AI-ассистент для кода — прямо в терминале.</title>
 <defs>
  <clipPath id="panel-clip"><rect width="1100" height="216" rx="18"/></clipPath>
  <linearGradient id="surface" x1="0" y1="0" x2=".85" y2="1">
@@ -7,6 +7,9 @@
  </linearGradient>
  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
   <stop offset="0" stop-color="#f7b48b"/><stop offset="1" stop-color="#5eead4"/>
+ </linearGradient>
+ <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#f7b48b"/><stop offset=".5" stop-color="#5eead4"/><stop offset="1" stop-color="#f7b48b"/>
  </linearGradient>
  <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
@@ -50,7 +53,6 @@ text{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif}
 @keyframes sheen{0%{transform:translateX(0);opacity:0}12%{opacity:.9}58%{opacity:.5}100%{transform:translateX(1780px);opacity:0}}
 @keyframes ripple{0%{transform:scale(.5);opacity:0}14%{opacity:.55}100%{transform:scale(1.75);opacity:0}}
 @keyframes dash{to{stroke-dashoffset:-1000}}
-@keyframes dashBack{to{stroke-dashoffset:1000}}
 @keyframes flow{to{stroke-dashoffset:-240}}
 @keyframes eq{0%,100%{transform:scaleY(.28);opacity:.55}50%{transform:scaleY(1);opacity:1}}
 @keyframes twinkle{0%,100%{opacity:.14;transform:scale(.55)}50%{opacity:1;transform:scale(1.3)}}
@@ -71,7 +73,6 @@ text{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif}
 .sheen{opacity:0;animation:sheen 11s cubic-bezier(.4,0,.2,1) infinite}
 .ripple{animation:ripple 4.4s cubic-bezier(.2,.6,.3,1) infinite}
 .dash{stroke-dasharray:150 850;animation:dash 13s linear infinite}
-.dash-rev{stroke-dasharray:70 930;animation:dashBack 17s linear infinite}
 .flow{stroke-dasharray:24 216;animation:flow 3.4s linear infinite}
 .eq{animation:eq 1.9s cubic-bezier(.4,0,.2,1) infinite}
 .twinkle{animation:twinkle 4.2s ease-in-out infinite}
@@ -89,11 +90,11 @@ text{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif}
 <g clip-path="url(#panel-clip)">
 <g fill="none" stroke="#cfd6ff" stroke-opacity=".05"><path d="M44 0V216"/><path d="M88 0V216"/><path d="M132 0V216"/><path d="M176 0V216"/><path d="M220 0V216"/><path d="M264 0V216"/><path d="M308 0V216"/><path d="M352 0V216"/><path d="M396 0V216"/><path d="M440 0V216"/><path d="M484 0V216"/><path d="M528 0V216"/><path d="M572 0V216"/><path d="M616 0V216"/><path d="M660 0V216"/><path d="M704 0V216"/><path d="M748 0V216"/><path d="M792 0V216"/><path d="M836 0V216"/><path d="M880 0V216"/><path d="M924 0V216"/><path d="M968 0V216"/><path d="M1012 0V216"/><path d="M1056 0V216"/><path d="M0 44H1100"/><path d="M0 88H1100"/><path d="M0 132H1100"/><path d="M0 176H1100"/></g>
 <g style="mix-blend-mode:screen">
- <ellipse class="drift-a" style="animation-delay:-2.8s" cx="250" cy="56" rx="330" ry="240" fill="url(#haloA)"/>
- <ellipse class="drift-b" style="animation-delay:-4.5s" cx="880" cy="164" rx="310" ry="230" fill="url(#haloB)"/>
+ <ellipse class="drift-a" style="animation-delay:-3.7s" cx="250" cy="56" rx="330" ry="240" fill="url(#haloA)"/>
+ <ellipse class="drift-b" style="animation-delay:-5.9s" cx="880" cy="164" rx="310" ry="230" fill="url(#haloB)"/>
 </g>
-<circle class="fx twinkle" style="animation-delay:-2.80s" cx="70" cy="26" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.27s" cx="207" cy="115" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.74s" cx="344" cy="40" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.01s" cx="481" cy="129" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.48s" cx="618" cy="54" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.95s" cx="755" cy="143" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.42s" cx="892" cy="68" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.89s" cx="1029" cy="157" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.36s" cx="206" cy="82" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.83s" cx="343" cy="171" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.30s" cx="480" cy="96" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.77s" cx="617" cy="185" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.04s" cx="754" cy="110" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.51s" cx="891" cy="35" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.98s" cx="1028" cy="124" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.45s" cx="205" cy="49" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.92s" cx="342" cy="138" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.39s" cx="479" cy="63" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.86s" cx="616" cy="152" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.33s" cx="753" cy="77" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.80s" cx="890" cy="166" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.07s" cx="1027" cy="91" r="1.8" fill="#e4ddff" opacity=".25"/>
-<g transform="skewX(-16)"><g class="sheen" style="animation-delay:-5.2s">
+<circle class="fx twinkle" style="animation-delay:-3.70s" cx="70" cy="26" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-4.17s" cx="207" cy="115" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.44s" cx="344" cy="40" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.91s" cx="481" cy="129" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.38s" cx="618" cy="54" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.85s" cx="755" cy="143" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.32s" cx="892" cy="68" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.79s" cx="1029" cy="157" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.26s" cx="206" cy="82" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.73s" cx="343" cy="171" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-4.20s" cx="480" cy="96" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.47s" cx="617" cy="185" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.94s" cx="754" cy="110" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.41s" cx="891" cy="35" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.88s" cx="1028" cy="124" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.35s" cx="205" cy="49" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.82s" cx="342" cy="138" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.29s" cx="479" cy="63" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.76s" cx="616" cy="152" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.03s" cx="753" cy="77" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.50s" cx="890" cy="166" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.97s" cx="1027" cy="91" r="1.8" fill="#e4ddff" opacity=".25"/>
+<g transform="skewX(-16)"><g class="sheen" style="animation-delay:-6.1s">
  <rect x="-300" y="-70" width="300" height="356" fill="url(#sheen)"/></g></g>
 </g>
 <rect width="1100" height="216" rx="18" fill="url(#vignette)"/>
@@ -101,25 +102,25 @@ text{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif}
  <rect x="1" y="34" width="3.4" height="148" rx="1.7" fill="#f7b48b"/>
  <rect class="load" x="1" y="34" width="3.4" height="148" rx="1.7" fill="#f7b48b" filter="url(#glow)" opacity=".45"/>
 </g>
-<text class="rise mono" style="animation-delay:-.1s" x="30" y="36" fill="#f7b48b" font-size="12" letter-spacing="1.8">03 / WEB × MOTION</text>
-<text class="rise" style="animation-delay:-.18s" x="30" y="88" fill="#f2f3fb" font-size="33" font-weight="600">dwertyfa / portfolio</text>
-<text class="rise" style="animation-delay:-.26s" x="30" y="126" fill="#aeb7cb" font-size="19">Интерактивное портфолио с 3D-графикой и анимациями.</text>
+<text class="rise mono" style="animation-delay:-.1s" x="30" y="36" fill="#f7b48b" font-size="12" letter-spacing="1.8">03 / SPHEREPRIME / DEVELOPER TOOLS</text>
+<text class="rise" style="animation-delay:-.18s" x="30" y="88" fill="#f2f3fb" font-size="33" font-weight="600">Prime CLI</text>
+<text class="rise" style="animation-delay:-.26s" x="30" y="126" fill="#aeb7cb" font-size="19">AI-ассистент для кода — прямо в терминале.</text>
 <g class="rise" style="animation-delay:-.34s">
- <text x="30" y="176" fill="#f7b48b" font-size="13" class="mono" letter-spacing="1">NEXT.JS   /   REACT   /   THREE.JS</text>
+ <text x="30" y="176" fill="#f7b48b" font-size="13" class="mono" letter-spacing="1">GO   /   MCP   /   MULTI-MODEL</text>
  <path d="M30 190h150" stroke="#f7b48b" stroke-opacity=".3"/>
  <path class="flow" d="M30 190h150" stroke="#f7b48b" stroke-width="2" stroke-linecap="round"/>
 </g>
 <path class="rise" style="animation-delay:-.3s" d="M820 26v164" stroke="#dfe6ff" stroke-opacity=".09"/>
 <g class="rise" style="animation-delay:-.38s">
- <g transform="translate(958 108)"><g class="floaty" style="animation-delay:-2.8s"><ellipse rx="140" ry="56" fill="url(#haloA)"/>
-<rect x="-100" y="-54" width="200" height="108" rx="12" fill="#111524" stroke="#f7b48b" stroke-width="1.8"/>
-<path d="M-100-28h200" stroke="#f7b48b" stroke-opacity=".4"/>
-<circle cx="-86" cy="-41" r="3.4" fill="#f7b48b"/><circle cx="-74" cy="-41" r="3.4" fill="#f7b48b" opacity=".6"/><circle cx="-62" cy="-41" r="3.4" fill="#f7b48b" opacity=".3"/>
-<rect x="-40" y="-48" width="52" height="15" rx="4" fill="#f7b48b" opacity=".2"/>
-<path d="m-70-2-16 14 16 14m60-28 16 14-16 14m-22-32-14 44" fill="none" stroke="#f7b48b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<rect class="blink" x="18" y="8" width="3" height="16" rx="1.5" fill="#f7b48b"/>
-<g clip-path="url(#web-clip)"><g transform="skewX(-14)"><g class="sheen" style="animation-delay:-6.8s">
-<rect x="-160" y="-54" width="90" height="108" fill="url(#sheen-soft)"/></g></g></g></g></g>
+ <g transform="translate(958 108)"><g class="floaty" style="animation-delay:-3.7s"><ellipse rx="140" ry="56" fill="url(#haloA)"/>
+<rect x="-100" y="-52" width="200" height="104" rx="11" fill="#0c1018" stroke="#f7b48b" stroke-width="1.8"/>
+<path d="M-100-28h200" stroke="#f7b48b" stroke-opacity=".35"/>
+<circle cx="-88" cy="-40" r="3.4" fill="#f7b48b" opacity=".8"/><circle cx="-76" cy="-40" r="3.4" fill="#f7b48b" opacity=".45"/>
+<text x="-60" y="-35" fill="#f7b48b" font-size="12" class="mono" opacity=".7">~/projects</text>
+<path d="m-80-8 10 8-10 8" fill="none" stroke="#f7b48b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M-80-1H20" stroke="#f7b48b" stroke-opacity="0.65" stroke-width="3" stroke-linecap="round"/><path d="M-8017H44" stroke="#f7b48b" stroke-opacity="0.51" stroke-width="3" stroke-linecap="round"/><path d="M-8035H68" stroke="#f7b48b" stroke-opacity="0.37" stroke-width="3" stroke-linecap="round"/>
+<rect class="blink" x="30" y="1" width="3" height="14" rx="1.5" fill="#f7b48b"/>
+<rect class="fxl load" x="-80" y="30" width="160" height="5" rx="2.5" fill="url(#accent)"/></g></g>
 </g>
 <g class="rise" style="animation-delay:-.44s"><circle cx="940" cy="192" r="3.2" fill="#39415a" opacity="0.7"/><circle cx="958" cy="192" r="3.2" fill="#39415a" opacity="0.7"/><circle cx="976" cy="192" r="3.2" fill="#f7b48b" class="fx breathe" style="animation-delay:-0.8s" opacity="1"/></g>
 <g class="rise" style="animation-delay:-.5s">
@@ -127,9 +128,8 @@ text{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif}
  <circle class="fx glow-pulse" cx="1040" cy="48" r="3" fill="#f7b48b"/>
 </g>
 
-<rect x="1" y="1" width="1098" height="214" rx="18" fill="none" stroke="url(#accent)" stroke-opacity=".2" stroke-width="1.4"/>
-<rect class="dash" style="animation-delay:-2.8s" x="1" y="1" width="1098" height="214" rx="18" pathLength="1000" fill="none" stroke="url(#accent)" stroke-width="1.7" stroke-linecap="round"/>
-<rect class="dash-rev" style="animation-delay:-7.8s" x="1" y="1" width="1098" height="214" rx="18" pathLength="1000" fill="none" stroke="#5eead4" stroke-width="1.2" stroke-linecap="round" opacity=".8"/>
-<rect x="44" y="1.6" width="1012" height="1.3" rx=".6" fill="url(#accent)" opacity=".45"/>
+<rect x="1" y="1" width="1098" height="214" rx="18" fill="none" stroke="url(#rim)" stroke-opacity=".2" stroke-width="1.4"/>
+<rect class="dash" style="animation-delay:-3.7s" x="1" y="1" width="1098" height="214" rx="18" pathLength="1000" fill="none" stroke="url(#rim)" stroke-width="1.7" stroke-linecap="round"/>
+<rect x="44" y="1.6" width="1012" height="1.3" rx=".65" fill="url(#rim)" opacity=".5"/>
 
 </svg>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1100" height="216" viewBox="0 0 1100 216" role="img" aria-labelledby="asset-title">
-<title id="asset-title">PrimeProxy: Локальный MTProto-прокси для Telegram через WebSocket.</title>
+<title id="asset-title">Nova Prestige: Промо-сайт жилого дома с атмосферой и вниманием к деталям.</title>
 <defs>
  <clipPath id="panel-clip"><rect width="1100" height="216" rx="18"/></clipPath>
  <linearGradient id="surface" x1="0" y1="0" x2=".85" y2="1">
@@ -7,6 +7,9 @@
  </linearGradient>
  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
   <stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#7dd3fc"/>
+ </linearGradient>
+ <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#5eead4"/><stop offset=".5" stop-color="#7dd3fc"/><stop offset="1" stop-color="#5eead4"/>
  </linearGradient>
  <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
@@ -50,7 +53,6 @@ text{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif}
 @keyframes sheen{0%{transform:translateX(0);opacity:0}12%{opacity:.9}58%{opacity:.5}100%{transform:translateX(1780px);opacity:0}}
 @keyframes ripple{0%{transform:scale(.5);opacity:0}14%{opacity:.55}100%{transform:scale(1.75);opacity:0}}
 @keyframes dash{to{stroke-dashoffset:-1000}}
-@keyframes dashBack{to{stroke-dashoffset:1000}}
 @keyframes flow{to{stroke-dashoffset:-240}}
 @keyframes eq{0%,100%{transform:scaleY(.28);opacity:.55}50%{transform:scaleY(1);opacity:1}}
 @keyframes twinkle{0%,100%{opacity:.14;transform:scale(.55)}50%{opacity:1;transform:scale(1.3)}}
@@ -71,7 +73,6 @@ text{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif}
 .sheen{opacity:0;animation:sheen 11s cubic-bezier(.4,0,.2,1) infinite}
 .ripple{animation:ripple 4.4s cubic-bezier(.2,.6,.3,1) infinite}
 .dash{stroke-dasharray:150 850;animation:dash 13s linear infinite}
-.dash-rev{stroke-dasharray:70 930;animation:dashBack 17s linear infinite}
 .flow{stroke-dasharray:24 216;animation:flow 3.4s linear infinite}
 .eq{animation:eq 1.9s cubic-bezier(.4,0,.2,1) infinite}
 .twinkle{animation:twinkle 4.2s ease-in-out infinite}
@@ -89,11 +90,11 @@ text{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif}
 <g clip-path="url(#panel-clip)">
 <g fill="none" stroke="#cfd6ff" stroke-opacity=".05"><path d="M44 0V216"/><path d="M88 0V216"/><path d="M132 0V216"/><path d="M176 0V216"/><path d="M220 0V216"/><path d="M264 0V216"/><path d="M308 0V216"/><path d="M352 0V216"/><path d="M396 0V216"/><path d="M440 0V216"/><path d="M484 0V216"/><path d="M528 0V216"/><path d="M572 0V216"/><path d="M616 0V216"/><path d="M660 0V216"/><path d="M704 0V216"/><path d="M748 0V216"/><path d="M792 0V216"/><path d="M836 0V216"/><path d="M880 0V216"/><path d="M924 0V216"/><path d="M968 0V216"/><path d="M1012 0V216"/><path d="M1056 0V216"/><path d="M0 44H1100"/><path d="M0 88H1100"/><path d="M0 132H1100"/><path d="M0 176H1100"/></g>
 <g style="mix-blend-mode:screen">
- <ellipse class="drift-a" style="animation-delay:-0.9s" cx="250" cy="56" rx="330" ry="240" fill="url(#haloA)"/>
- <ellipse class="drift-b" style="animation-delay:-1.4s" cx="880" cy="164" rx="310" ry="230" fill="url(#haloB)"/>
+ <ellipse class="drift-a" style="animation-delay:-0.6s" cx="250" cy="56" rx="330" ry="240" fill="url(#haloA)"/>
+ <ellipse class="drift-b" style="animation-delay:-1.0s" cx="880" cy="164" rx="310" ry="230" fill="url(#haloB)"/>
 </g>
-<circle class="fx twinkle" style="animation-delay:-0.90s" cx="70" cy="26" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.37s" cx="207" cy="115" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.84s" cx="344" cy="40" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.31s" cx="481" cy="129" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.78s" cx="618" cy="54" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.25s" cx="755" cy="143" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.72s" cx="892" cy="68" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-4.19s" cx="1029" cy="157" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.46s" cx="206" cy="82" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.93s" cx="343" cy="171" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.40s" cx="480" cy="96" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.87s" cx="617" cy="185" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.34s" cx="754" cy="110" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.81s" cx="891" cy="35" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.28s" cx="1028" cy="124" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.75s" cx="205" cy="49" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.02s" cx="342" cy="138" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.49s" cx="479" cy="63" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.96s" cx="616" cy="152" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.43s" cx="753" cy="77" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.90s" cx="890" cy="166" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.37s" cx="1027" cy="91" r="1.8" fill="#e4ddff" opacity=".25"/>
-<g transform="skewX(-16)"><g class="sheen" style="animation-delay:-3.3s">
+<circle class="fx twinkle" style="animation-delay:-0.60s" cx="70" cy="26" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.07s" cx="207" cy="115" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.54s" cx="344" cy="40" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.01s" cx="481" cy="129" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.48s" cx="618" cy="54" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.95s" cx="755" cy="143" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.42s" cx="892" cy="68" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.89s" cx="1029" cy="157" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.16s" cx="206" cy="82" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.63s" cx="343" cy="171" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.10s" cx="480" cy="96" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.57s" cx="617" cy="185" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.04s" cx="754" cy="110" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.51s" cx="891" cy="35" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.98s" cx="1028" cy="124" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.45s" cx="205" cy="49" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-3.92s" cx="342" cy="138" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.19s" cx="479" cy="63" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-0.66s" cx="616" cy="152" r="1.8" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.13s" cx="753" cy="77" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-1.60s" cx="890" cy="166" r="1.1" fill="#e4ddff" opacity=".25"/><circle class="fx twinkle" style="animation-delay:-2.07s" cx="1027" cy="91" r="1.8" fill="#e4ddff" opacity=".25"/>
+<g transform="skewX(-16)"><g class="sheen" style="animation-delay:-3.0s">
  <rect x="-300" y="-70" width="300" height="356" fill="url(#sheen)"/></g></g>
 </g>
 <rect width="1100" height="216" rx="18" fill="url(#vignette)"/>
@@ -101,34 +102,32 @@ text{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif}
  <rect x="1" y="34" width="3.4" height="148" rx="1.7" fill="#5eead4"/>
  <rect class="load" x="1" y="34" width="3.4" height="148" rx="1.7" fill="#5eead4" filter="url(#glow)" opacity=".45"/>
 </g>
-<text class="rise mono" style="animation-delay:-.1s" x="30" y="36" fill="#5eead4" font-size="12" letter-spacing="1.8">01 / SPHEREPRIME / NETWORK</text>
-<text class="rise" style="animation-delay:-.18s" x="30" y="88" fill="#f2f3fb" font-size="33" font-weight="600">PrimeProxy</text>
-<text class="rise" style="animation-delay:-.26s" x="30" y="126" fill="#aeb7cb" font-size="19">Локальный MTProto-прокси для Telegram через WebSocket.</text>
+<text class="rise mono" style="animation-delay:-.1s" x="30" y="36" fill="#5eead4" font-size="12" letter-spacing="1.8">01 / WEB / ARCHITECTURE</text>
+<text class="rise" style="animation-delay:-.18s" x="30" y="88" fill="#f2f3fb" font-size="33" font-weight="600">Nova Prestige</text>
+<text class="rise" style="animation-delay:-.26s" x="30" y="126" fill="#aeb7cb" font-size="19">Промо-сайт жилого дома с атмосферой и вниманием к деталям.</text>
 <g class="rise" style="animation-delay:-.34s">
- <text x="30" y="176" fill="#5eead4" font-size="13" class="mono" letter-spacing="1">PYTHON   /   MTPROTO   /   WEBSOCKET</text>
+ <text x="30" y="176" fill="#5eead4" font-size="13" class="mono" letter-spacing="1">REAL ESTATE   /   RESPONSIVE   /   MOTION</text>
  <path d="M30 190h150" stroke="#5eead4" stroke-opacity=".3"/>
  <path class="flow" d="M30 190h150" stroke="#5eead4" stroke-width="2" stroke-linecap="round"/>
 </g>
 <path class="rise" style="animation-delay:-.3s" d="M820 26v164" stroke="#dfe6ff" stroke-opacity=".09"/>
 <g class="rise" style="animation-delay:-.38s">
- <g transform="translate(958 108)"><g class="floaty" style="animation-delay:-0.9s"><ellipse rx="140" ry="54" fill="url(#haloA)"/>
-<g class="pivot spin-slow" opacity=".45"><circle r="98" fill="none" stroke="#5eead4" stroke-dasharray="2 16"/></g>
-<path d="M-64 0H64" stroke="#5eead4" stroke-opacity=".26" stroke-width="2"/>
-<path class="flow" d="M-64 0H64" stroke="#5eead4" stroke-width="2.4" stroke-linecap="round"/>
-<g class="fx breathe"><circle r="16" fill="#0f1422" stroke="#5eead4" stroke-width="1.8"/><circle r="5" fill="#5eead4"/></g>
-<rect x="-112" y="-26" width="44" height="52" rx="9" fill="#141a29" stroke="#5eead4" stroke-width="1.8"/>
-<rect x="68" y="-26" width="44" height="52" rx="9" fill="#141a29" stroke="#5eead4" stroke-width="1.8"/>
-<path d="M-102-8h24m-24 12h24m-24 12h14m120-24h24m-24 12h24m-24 12h14" stroke="#5eead4" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/></g></g>
+ <g transform="translate(958 108)"><g class="floaty" style="animation-delay:-0.6s"><ellipse rx="135" ry="58" fill="url(#haloA)"/>
+<g fill="none" stroke="#5eead4" stroke-linejoin="round">
+<path d="M-118 60h150" stroke-width="2"/>
+<path d="M-104 60V4l30-16V60" fill="none" stroke="#5eead4" stroke-width="2" stroke-linejoin="round"/><path d="M-68 60V16l30-16V60" fill="none" stroke="#5eead4" stroke-width="2" stroke-linejoin="round"/><path d="M-32 60V-2l30-16V60" fill="none" stroke="#5eead4" stroke-width="2" stroke-linejoin="round"/><path d="M4 60V26l30-16V60" fill="none" stroke="#5eead4" stroke-width="2" stroke-linejoin="round"/><path d="M40 60V12l30-16V60" fill="none" stroke="#5eead4" stroke-width="2" stroke-linejoin="round"/></g>
+<g><rect class="blink" style="animation-delay:-0.00s" x="-96" y="18" width="5" height="7" rx="1" fill="#5eead4" opacity=".85"/><rect class="blink" style="animation-delay:-1.65s" x="-82" y="46" width="5" height="7" rx="1" fill="#5eead4" opacity=".85"/><rect class="blink" style="animation-delay:-2.64s" x="-46" y="44" width="5" height="7" rx="1" fill="#5eead4" opacity=".85"/><rect class="blink" style="animation-delay:-0.00s" x="-10" y="12" width="5" height="7" rx="1" fill="#5eead4" opacity=".85"/><rect class="blink" style="animation-delay:-0.33s" x="-24" y="26" width="5" height="7" rx="1" fill="#5eead4" opacity=".85"/><rect class="blink" style="animation-delay:-1.32s" x="12" y="40" width="5" height="7" rx="1" fill="#5eead4" opacity=".85"/><rect class="blink" style="animation-delay:-0.33s" x="62" y="40" width="5" height="7" rx="1" fill="#5eead4" opacity=".85"/></g>
+<path class="flow" d="M-104 4l30-16 M-68 16l30-16 M-32 -2l30-16 M4 26l30-16 M40 12l30-16" fill="none" stroke="#5eead4" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M-118 60h150" stroke="#5eead4" stroke-opacity=".35" stroke-width="1"/></g></g>
 </g>
-<g class="rise" style="animation-delay:-.44s"><circle cx="940" cy="192" r="3.2" fill="#5eead4" class="fx breathe" style="animation-delay:-0.0s" opacity="1"/><circle cx="958" cy="192" r="3.2" fill="#39415a" opacity="0.7"/><circle cx="976" cy="192" r="3.2" fill="#39415a" opacity="0.7"/></g>
+<g class="rise" style="animation-delay:-.44s"><circle cx="931" cy="192" r="3.2" fill="#5eead4" class="fx breathe" style="animation-delay:-0.0s" opacity="1"/><circle cx="949" cy="192" r="3.2" fill="#39415a" opacity="0.7"/><circle cx="967" cy="192" r="3.2" fill="#39415a" opacity="0.7"/><circle cx="985" cy="192" r="3.2" fill="#39415a" opacity="0.7"/></g>
 <g class="rise" style="animation-delay:-.5s">
  <path d="M1040 32h16v16m-16 0 16-16" fill="none" stroke="#adb5cb" stroke-width="1.8" stroke-linecap="round"/>
  <circle class="fx glow-pulse" cx="1040" cy="48" r="3" fill="#5eead4"/>
 </g>
 
-<rect x="1" y="1" width="1098" height="214" rx="18" fill="none" stroke="url(#accent)" stroke-opacity=".2" stroke-width="1.4"/>
-<rect class="dash" style="animation-delay:-0.9s" x="1" y="1" width="1098" height="214" rx="18" pathLength="1000" fill="none" stroke="url(#accent)" stroke-width="1.7" stroke-linecap="round"/>
-<rect class="dash-rev" style="animation-delay:-5.9s" x="1" y="1" width="1098" height="214" rx="18" pathLength="1000" fill="none" stroke="#7dd3fc" stroke-width="1.2" stroke-linecap="round" opacity=".8"/>
-<rect x="44" y="1.6" width="1012" height="1.3" rx=".6" fill="url(#accent)" opacity=".45"/>
+<rect x="1" y="1" width="1098" height="214" rx="18" fill="none" stroke="url(#rim)" stroke-opacity=".2" stroke-width="1.4"/>
+<rect class="dash" style="animation-delay:-0.6s" x="1" y="1" width="1098" height="214" rx="18" pathLength="1000" fill="none" stroke="url(#rim)" stroke-width="1.7" stroke-linecap="round"/>
+<rect x="44" y="1.6" width="1012" height="1.3" rx=".65" fill="url(#rim)" opacity=".5"/>
 
 </svg>
