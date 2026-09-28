@@ -17,7 +17,7 @@ def svg(name, height, content, title):
 <path class="horizon" d="M-250 {height-2}h250" stroke="url(#accent)" stroke-width="3"/>
 </g>'''
     content = re.sub(r'(<rect\b[^>]+/>)', lambda m: m.group(1)+ambient, content, count=1)
-    content += f'<rect class="edge" x="1.5" y="1.5" width="1097" height="{height-3}" rx="17" fill="none" stroke="url(#accent)" stroke-width="1.3" pointer-events="none"/>'
+    content += f'<rect class="edge" pathLength="1000" x="1.5" y="1.5" width="1097" height="{height-3}" rx="17" fill="none" stroke="url(#accent)" stroke-width="1.3" pointer-events="none"/>'
     document = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="{height}" viewBox="0 0 1100 {height}" role="img" aria-labelledby="title">
 <title id="title">{escape(title)}</title>
 <defs>
@@ -37,14 +37,19 @@ text {{font-family: 'Segoe UI', Arial, sans-serif;}}
 .float {{animation:float 5s ease-in-out infinite;}}
 .aurora {{animation:aurora 9s ease-in-out infinite;}}
 .horizon {{animation:horizon 7s ease-in-out infinite;}}
-.edge {{stroke-dasharray:170 3000; animation:edge 13s linear infinite; opacity:.6;}}
+.edge {{stroke-dasharray:85 915; animation:edge 12s linear infinite; opacity:.6;}}
+.spin {{animation:spin 18s linear infinite;}}
+.spin-back {{animation:spin 26s linear infinite reverse;}}
+.ripple {{animation:ripple 5s ease-out infinite;}}
+@keyframes spin {{to {{transform:rotate(360deg);}}}}
+@keyframes ripple {{0% {{transform:scale(.72);opacity:0;}} 18% {{opacity:.5;}} 100% {{transform:scale(1.65);opacity:0;}}}}
 .sparkle {{animation:sparkle 4s ease-in-out infinite;}}
 .equalizer {{transform-box:fill-box; transform-origin:center; animation:equalizer 1.7s ease-in-out infinite;}}
 .badge {{animation:badge 6s ease-in-out infinite;}}
 @keyframes float {{0%,100% {{transform:translateY(0);}} 50% {{transform:translateY(-7px);}}}}
 @keyframes aurora {{0%,100% {{opacity:.3;transform:translateX(20px);}} 50% {{opacity:1;transform:translateX(-100px);}}}}
 @keyframes horizon {{0% {{transform:translateX(0);opacity:0;}} 15%,80% {{opacity:.8;}} 100% {{transform:translateX(1400px);opacity:0;}}}}
-@keyframes edge {{to {{stroke-dashoffset:-3170;}}}}
+@keyframes edge {{to {{stroke-dashoffset:-1000;}}}}
 @keyframes sparkle {{0%,100% {{opacity:.12;}} 50% {{opacity:.9;}}}}
 @keyframes equalizer {{0%,100% {{transform:scaleY(.45);opacity:.45;}} 50% {{transform:scaleY(1);opacity:1;}}}}
 @keyframes badge {{0%,100% {{stroke:#39364f;}} 50% {{stroke:#8270ac;}}}}
@@ -60,12 +65,17 @@ text {{font-family: 'Segoe UI', Arial, sans-serif;}}
 avatar_data = base64.b64encode((ASSETS / 'avatar.png').read_bytes()).decode('ascii')
 
 stars = ''.join(f'<circle class="sparkle" style="animation-delay:-{i*.37}s" cx="{620+(i*137)%450}" cy="{30+(i*83)%355}" r="{1 if i%3 else 1.7}" fill="#cbbcff" opacity="{.12+(i%4)*.1}"/>' for i in range(32))
-rings = ''
-for angle in (-32, 32, 90):
-    rings += f'''<g transform="translate(854 208) rotate({angle})">
-    <ellipse rx="156" ry="64" fill="none" stroke="#665984" stroke-opacity=".45"/>
-    <ellipse class="orbit {'reverse' if angle==32 else ''}" rx="156" ry="64" fill="none" stroke="url(#accent)" stroke-width="2.2"/>
-    </g>'''
+rings = '<g transform="translate(854 208)">'
+for delay in (0, -1.7, -3.4):
+    rings += f'<circle class="ripple" style="animation-delay:{delay}s" r="79" fill="none" stroke="#bba7ff" stroke-width="1"/>'
+for index, angle in enumerate((-32, 32, 90)):
+    direction = 'spin-back' if index == 1 else 'spin'
+    rings += f'''<g class="{direction}" style="animation-duration:{18+index*7}s"><g transform="rotate({angle})">
+    <ellipse rx="156" ry="64" fill="none" stroke="#665984" stroke-opacity=".5"/>
+    <ellipse class="orbit" rx="156" ry="64" fill="none" stroke="url(#accent)" stroke-width="2.2"/>
+    <circle cx="156" cy="0" r="4" fill="#88f3cf"/><circle cx="156" cy="0" r="7" fill="#88f3cf" opacity=".45" filter="url(#glow)"/>
+    </g></g>'''
+rings += '<g class="spin-back"><circle r="96" fill="none" stroke="#bba7ff" stroke-opacity=".4" stroke-dasharray="2 15"/><circle cx="0" cy="-96" r="3" fill="#f2b99b"/></g></g>'
 
 svg('hero.svg', 440, f'''
 <rect x=".5" y=".5" width="1099" height="439" rx="22" fill="#0b1018" stroke="#2b3041"/>
