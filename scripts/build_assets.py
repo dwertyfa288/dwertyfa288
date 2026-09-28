@@ -72,7 +72,7 @@ def card(filename, number, label, name, description, tags, color, icon):
     elif icon == 'building':
         art = f'<g fill="none" stroke="{color}"><path d="M873 161V79l42-24v106m0-62 39-23v85m0-44 49-20v64M860 162h156" stroke-width="2"/><path d="M886 92v53m15-63v63m29-29v29m13-37v37m27-17v17m17-22v22" opacity=".4"/><path class="flow" d="M873 161V79l42-24v106h88V97l-49 20" stroke-width="3"/></g>'
     elif icon == 'shield':
-        art = f'<path d="m941 48 65 24v37c0 26-34 47-65 60-31-13-65-34-65-60V72Z" fill="none" stroke="{color}" stroke-width="2"/><path class="pulse" d="m919 88 38 0-19 26h24l-44 38 14-30h-21Z" fill="{color}"/><ellipse class="orbit" cx="941" cy="108" rx="88" ry="31" fill="none" stroke="{color}" opacity=".5"/>'
+        art = f'<path d="M942 48 1000 70v39c0 26-26 48-58 62-32-14-58-36-58-62V70Z" fill="#1b1930" stroke="{color}" stroke-width="2" stroke-linejoin="round"/><path d="M942 59 989 77v32c0 19-20 39-47 52-27-13-47-33-47-52V77Z" fill="none" stroke="{color}" opacity=".15"/><rect x="922" y="99" width="40" height="33" rx="7" fill="{color}" opacity=".9"/><path d="M929 99V88a13 13 0 0 1 26 0v11" fill="none" stroke="{color}" stroke-width="3"/><circle cx="942" cy="113" r="3" fill="#1b1930"/><path d="M942 114v7" stroke="#1b1930" stroke-width="2"/>'
     elif icon == 'film':
         art = f'<rect x="866" y="61" width="151" height="92" rx="8" fill="none" stroke="{color}"/><path d="M866 81h151m-151 52h151m-132-72v20m25-20v20m25-20v20m25-20v20m25-20v20m-100 52v20m25-20v20m25-20v20m25-20v20m25-20v20" stroke="{color}" opacity=".5"/><path class="pulse" d="m932 93 24 15-24 15Z" fill="{color}"/>'
     elif icon == 'spark':
@@ -84,7 +84,7 @@ def card(filename, number, label, name, description, tags, color, icon):
     elif icon == 'cli':
         art = f'<rect x="866" y="58" width="154" height="99" rx="9" fill="none" stroke="{color}"/><path d="M866 80h154m-137-12h3m8 0h3m8 0h3" stroke="{color}" opacity=".5"/><path d="m887 101 13 11-13 11" fill="none" stroke="{color}" stroke-width="2"/><path class="pulse" d="M913 124h25" stroke="{color}" stroke-width="3"/>'
     else:
-        art = f'<g transform="translate(942 105) rotate(-24)"><ellipse rx="71" ry="31" fill="none" stroke="{color}" opacity=".4"/><ellipse class="orbit" rx="71" ry="31" fill="none" stroke="{color}" stroke-width="2"/><circle r="34" fill="none" stroke="{color}"/><path d="M-34 0h68M0-34v68" stroke="{color}" opacity=".5"/></g>'
+        art = f'<rect x="882" y="65" width="132" height="100" rx="10" fill="#181b27" stroke="{color}" opacity=".22"/><rect x="867" y="50" width="140" height="102" rx="10" fill="#151923" stroke="{color}" stroke-width="2"/><path d="M867 77h140" stroke="{color}" opacity=".35"/><circle cx="881" cy="64" r="3" fill="{color}"/><circle cx="892" cy="64" r="3" fill="{color}" opacity=".55"/><circle cx="903" cy="64" r="3" fill="{color}" opacity=".25"/><path d="m911 95-15 17 15 17m51-34 15 17-15 17m-18-38-14 42" fill="none" stroke="{color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
     svg(filename, 208, f'''
 <rect x=".5" y=".5" width="1099" height="207" rx="17" fill="url(#panel)" stroke="#2b3041"/>
 <rect x="1" y="39" width="3" height="130" rx="1.5" fill="{color}"/>

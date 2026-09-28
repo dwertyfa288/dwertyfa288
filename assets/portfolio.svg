@@ -26,7 +26,7 @@ text {font-family: 'Segoe UI', Arial, sans-serif;}
 <text x="30" y="123" fill="#aeb7cb" font-size="19">Интерактивное портфолио с 3D-графикой и анимациями.</text>
 <text x="30" y="174" fill="#f2b99b" font-size="13" class="mono" letter-spacing="1">NEXT.JS   /   REACT   /   THREE.JS</text>
 <path d="M813 30V178" stroke="#2b3041"/>
-<g transform="translate(942 105) rotate(-24)"><ellipse rx="71" ry="31" fill="none" stroke="#f2b99b" opacity=".4"/><ellipse class="orbit" rx="71" ry="31" fill="none" stroke="#f2b99b" stroke-width="2"/><circle r="34" fill="none" stroke="#f2b99b"/><path d="M-34 0h68M0-34v68" stroke="#f2b99b" opacity=".5"/></g>
+<rect x="882" y="65" width="132" height="100" rx="10" fill="#181b27" stroke="#f2b99b" opacity=".22"/><rect x="867" y="50" width="140" height="102" rx="10" fill="#151923" stroke="#f2b99b" stroke-width="2"/><path d="M867 77h140" stroke="#f2b99b" opacity=".35"/><circle cx="881" cy="64" r="3" fill="#f2b99b"/><circle cx="892" cy="64" r="3" fill="#f2b99b" opacity=".55"/><circle cx="903" cy="64" r="3" fill="#f2b99b" opacity=".25"/><path d="m911 95-15 17 15 17m51-34 15 17-15 17m-18-38-14 42" fill="none" stroke="#f2b99b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M1042 35h16v16m-16 0 16-16" fill="none" stroke="#adb5cb" stroke-width="1.8"/>
 
 </svg>

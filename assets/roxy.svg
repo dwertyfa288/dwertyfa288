@@ -26,7 +26,7 @@ text {font-family: 'Segoe UI', Arial, sans-serif;}
 <text x="30" y="123" fill="#aeb7cb" font-size="19">VPN-продукт: от инфраструктуры до приложения и сайта.</text>
 <text x="30" y="174" fill="#bba7ff" font-size="13" class="mono" letter-spacing="1">FULL-STACK   /   VPN   /   INFRASTRUCTURE</text>
 <path d="M813 30V178" stroke="#2b3041"/>
-<path d="m941 48 65 24v37c0 26-34 47-65 60-31-13-65-34-65-60V72Z" fill="none" stroke="#bba7ff" stroke-width="2"/><path class="pulse" d="m919 88 38 0-19 26h24l-44 38 14-30h-21Z" fill="#bba7ff"/><ellipse class="orbit" cx="941" cy="108" rx="88" ry="31" fill="none" stroke="#bba7ff" opacity=".5"/>
+<path d="M942 48 1000 70v39c0 26-26 48-58 62-32-14-58-36-58-62V70Z" fill="#1b1930" stroke="#bba7ff" stroke-width="2" stroke-linejoin="round"/><path d="M942 59 989 77v32c0 19-20 39-47 52-27-13-47-33-47-52V77Z" fill="none" stroke="#bba7ff" opacity=".15"/><rect x="922" y="99" width="40" height="33" rx="7" fill="#bba7ff" opacity=".9"/><path d="M929 99V88a13 13 0 0 1 26 0v11" fill="none" stroke="#bba7ff" stroke-width="3"/><circle cx="942" cy="113" r="3" fill="#1b1930"/><path d="M942 114v7" stroke="#1b1930" stroke-width="2"/>
 <path d="M1042 35h16v16m-16 0 16-16" fill="none" stroke="#adb5cb" stroke-width="1.8"/>
 
 </svg>
