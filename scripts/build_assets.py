@@ -11,9 +11,17 @@ ASSETS = ROOT / 'assets'
 ASSETS.mkdir(exist_ok=True)
 
 def svg(name, height, content, title):
+    # Motion stays behind the content; lettering and links remain still.
+    ambient = f'''<g clip-path="url(#panel-clip)" pointer-events="none">
+<ellipse class="aurora" cx="960" cy="{height/2}" rx="280" ry="{height*.8}" fill="url(#halo)"/>
+<path class="horizon" d="M-250 {height-2}h250" stroke="url(#accent)" stroke-width="3"/>
+</g>'''
+    content = re.sub(r'(<rect\b[^>]+/>)', lambda m: m.group(1)+ambient, content, count=1)
+    content += f'<rect class="edge" x="1.5" y="1.5" width="1097" height="{height-3}" rx="17" fill="none" stroke="url(#accent)" stroke-width="1.3" pointer-events="none"/>'
     document = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="{height}" viewBox="0 0 1100 {height}" role="img" aria-labelledby="title">
 <title id="title">{escape(title)}</title>
 <defs>
+ <clipPath id="panel-clip"><rect width="1100" height="{height}" rx="18"/></clipPath>
  <linearGradient id="accent"><stop stop-color="#bba7ff"/><stop offset="1" stop-color="#88f3cf"/></linearGradient>
  <radialGradient id="halo"><stop stop-color="#7359c4" stop-opacity=".35"/><stop offset="1" stop-color="#0c1018" stop-opacity="0"/></radialGradient>
  <linearGradient id="panel" x2="1" y2="1"><stop stop-color="#141925"/><stop offset="1" stop-color="#0b1018"/></linearGradient>
@@ -22,14 +30,28 @@ def svg(name, height, content, title):
 <style>
 text {{font-family: 'Segoe UI', Arial, sans-serif;}}
 .mono {{font-family: Consolas, 'Courier New', monospace;}}
-.orbit {{stroke-dasharray:90 640; animation: orbit 14s linear infinite;}}
+.orbit {{stroke-dasharray:150 580; animation: orbit 9s linear infinite;}}
 .reverse {{animation-direction:reverse; animation-duration:21s;}}
 .pulse {{animation:pulse 5s ease-in-out infinite;}}
-.flow {{stroke-dasharray:28 190; animation:flow 9s linear infinite;}}
+.flow {{stroke-dasharray:44 174; animation:flow 5s linear infinite;}}
+.float {{animation:float 5s ease-in-out infinite;}}
+.aurora {{animation:aurora 9s ease-in-out infinite;}}
+.horizon {{animation:horizon 7s ease-in-out infinite;}}
+.edge {{stroke-dasharray:170 3000; animation:edge 13s linear infinite; opacity:.6;}}
+.sparkle {{animation:sparkle 4s ease-in-out infinite;}}
+.equalizer {{transform-box:fill-box; transform-origin:center; animation:equalizer 1.7s ease-in-out infinite;}}
+.badge {{animation:badge 6s ease-in-out infinite;}}
+@keyframes float {{0%,100% {{transform:translateY(0);}} 50% {{transform:translateY(-7px);}}}}
+@keyframes aurora {{0%,100% {{opacity:.3;transform:translateX(20px);}} 50% {{opacity:1;transform:translateX(-100px);}}}}
+@keyframes horizon {{0% {{transform:translateX(0);opacity:0;}} 15%,80% {{opacity:.8;}} 100% {{transform:translateX(1400px);opacity:0;}}}}
+@keyframes edge {{to {{stroke-dashoffset:-3170;}}}}
+@keyframes sparkle {{0%,100% {{opacity:.12;}} 50% {{opacity:.9;}}}}
+@keyframes equalizer {{0%,100% {{transform:scaleY(.45);opacity:.45;}} 50% {{transform:scaleY(1);opacity:1;}}}}
+@keyframes badge {{0%,100% {{stroke:#39364f;}} 50% {{stroke:#8270ac;}}}}
 @keyframes orbit {{to {{stroke-dashoffset:-730;}}}}
 @keyframes flow {{to {{stroke-dashoffset:-436;}}}}
 @keyframes pulse {{0%,100% {{opacity:.35;}} 50% {{opacity:1;}}}}
-@media (prefers-reduced-motion:reduce) {{.orbit,.pulse,.flow {{animation:none;}}}}
+@media (prefers-reduced-motion:reduce) {{* {{animation:none !important;}}}}
 </style>
 {content}
 </svg>'''
@@ -37,7 +59,7 @@ text {{font-family: 'Segoe UI', Arial, sans-serif;}}
 
 avatar_data = base64.b64encode((ASSETS / 'avatar.png').read_bytes()).decode('ascii')
 
-stars = ''.join(f'<circle cx="{620+(i*137)%450}" cy="{30+(i*83)%355}" r="{1 if i%3 else 1.7}" fill="#cbbcff" opacity="{.12+(i%4)*.1}"/>' for i in range(32))
+stars = ''.join(f'<circle class="sparkle" style="animation-delay:-{i*.37}s" cx="{620+(i*137)%450}" cy="{30+(i*83)%355}" r="{1 if i%3 else 1.7}" fill="#cbbcff" opacity="{.12+(i%4)*.1}"/>' for i in range(32))
 rings = ''
 for angle in (-32, 32, 90):
     rings += f'''<g transform="translate(854 208) rotate({angle})">
@@ -71,7 +93,7 @@ svg('hero.svg', 440, f'''
 ''', 'dwertyfa — full-stack, голосовые интерфейсы и интеграции. От идеи до живого продукта.')
 
 def card(filename, number, label, name, description, tags, color, icon):
-    bars = ''.join(f'<rect x="{886+i*13}" y="{99-(i%4)*8}" width="5" height="{16+(i%4)*16}" rx="2" fill="{color}" opacity="{.25+i*.06}"/>' for i in range(9))
+    bars = ''.join(f'<rect class="equalizer" style="animation-delay:-{i*.19}s" x="{886+i*13}" y="{99-(i%4)*8}" width="5" height="{16+(i%4)*16}" rx="2" fill="{color}" opacity="{.25+i*.06}"/>' for i in range(9))
     if icon == 'voice':
         art = f'<g class="pulse">{bars}</g>'
     elif icon == 'telegram':
@@ -100,7 +122,7 @@ def card(filename, number, label, name, description, tags, color, icon):
 <text x="30" y="123" fill="#aeb7cb" font-size="19">{description}</text>
 <text x="30" y="174" fill="{color}" font-size="13" class="mono" letter-spacing="1">{tags}</text>
 <path d="M813 30V178" stroke="#2b3041"/>
-{art}
+<g class="float">{art}</g>
 <path d="M1042 35h16v16m-16 0 16-16" fill="none" stroke="#adb5cb" stroke-width="1.8"/>
 ''', f'{name}: {description}')
 
@@ -137,7 +159,7 @@ for x, color, title, line1, line2 in [
 chips = ''
 x = 36
 for label, width in [('TypeScript', 156), ('React', 110), ('Next.js', 131), ('Go', 80), ('Rust', 97), ('Tauri', 104), ('Python', 122)]:
-    chips += f'<rect x="{x}" y="342" width="{width}" height="42" rx="9" fill="#171b2b" stroke="#39364f"/><text x="{x+width/2}" y="370" text-anchor="middle" fill="#ded6f5" font-size="21" class="mono">{label}</text>'
+    chips += f'<rect class="badge" style="animation-delay:-{x/150}s" x="{x}" y="342" width="{width}" height="42" rx="9" fill="#171b2b" stroke="#39364f"/><text x="{x+width/2}" y="370" text-anchor="middle" fill="#ded6f5" font-size="21" class="mono">{label}</text>'
     x += width + 13
 svg('about.svg', 460, f'''
 <rect x=".5" y=".5" width="1099" height="459" rx="18" fill="url(#panel)" stroke="#2b3041"/>
