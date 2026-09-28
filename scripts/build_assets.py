@@ -2,6 +2,7 @@
 from pathlib import Path
 from html import escape
 import math
+import base64
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / 'assets'
@@ -32,6 +33,8 @@ text {{font-family: 'Segoe UI', Arial, sans-serif;}}
 </svg>'''
     (ASSETS / name).write_text(document, encoding='utf-8')
 
+avatar_data = base64.b64encode((ASSETS / 'avatar.png').read_bytes()).decode('ascii')
+
 stars = ''.join(f'<circle cx="{620+(i*137)%450}" cy="{30+(i*83)%355}" r="{1 if i%3 else 1.7}" fill="#cbbcff" opacity="{.12+(i%4)*.1}"/>' for i in range(32))
 rings = ''
 for angle in (-32, 32, 90):
@@ -55,7 +58,9 @@ svg('hero.svg', 440, f'''
 {rings}
 <circle cx="854" cy="208" r="59" fill="#111625" stroke="#71628e"/>
 <circle class="pulse" cx="854" cy="208" r="61" fill="none" stroke="#bba7ff" stroke-width="3" filter="url(#glow)"/>
-<text x="854" y="227" text-anchor="middle" fill="#e3d9ff" font-size="62" font-weight="600">d<tspan fill="#88f3cf">.</tspan></text>
+<defs><clipPath id="avatar-clip"><circle cx="854" cy="208" r="56"/></clipPath></defs>
+<image x="798" y="152" width="112" height="112" href="data:image/jpeg;base64,{avatar_data}" clip-path="url(#avatar-clip)" preserveAspectRatio="xMidYMid slice"/>
+<circle cx="854" cy="208" r="58" fill="none" stroke="#bba7ff" stroke-opacity=".65"/>
 <text x="854" y="382" text-anchor="middle" fill="#828aa2" font-size="12" class="mono" letter-spacing="2">IDEAS IN ORBIT</text>
 <path d="M46 361H650" stroke="#292e40"/>
 <circle cx="51" cy="385" r="4" fill="#88f3cf"/>
