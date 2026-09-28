@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="208" viewBox="0 0 1100 208" role="img" aria-labelledby="title">
+<title id="title">danek montage: Портфолио видеомонтажёра, в котором движение задаёт ритм.</title>
+<defs>
+ <linearGradient id="accent"><stop stop-color="#bba7ff"/><stop offset="1" stop-color="#88f3cf"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#7359c4" stop-opacity=".35"/><stop offset="1" stop-color="#0c1018" stop-opacity="0"/></radialGradient>
+ <linearGradient id="panel" x2="1" y2="1"><stop stop-color="#141925"/><stop offset="1" stop-color="#0b1018"/></linearGradient>
+ <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4"/></filter>
+</defs>
+<style>
+text {font-family: 'Segoe UI', Arial, sans-serif;}
+.mono {font-family: Consolas, 'Courier New', monospace;}
+.orbit {stroke-dasharray:90 640; animation: orbit 14s linear infinite;}
+.reverse {animation-direction:reverse; animation-duration:21s;}
+.pulse {animation:pulse 5s ease-in-out infinite;}
+.flow {stroke-dasharray:28 190; animation:flow 9s linear infinite;}
+@keyframes orbit {to {stroke-dashoffset:-730;}}
+@keyframes flow {to {stroke-dashoffset:-436;}}
+@keyframes pulse {0%,100% {opacity:.35;} 50% {opacity:1;}}
+@media (prefers-reduced-motion:reduce) {.orbit,.pulse,.flow {animation:none;}}
+</style>
+
+<rect x=".5" y=".5" width="1099" height="207" rx="17" fill="url(#panel)" stroke="#2b3041"/>
+<rect x="1" y="39" width="3" height="130" rx="1.5" fill="#f2b99b"/>
+<text x="30" y="35" fill="#f2b99b" font-size="12" letter-spacing="1.8" class="mono">03 / WEB / CREATIVE PORTFOLIO</text>
+<text x="30" y="85" fill="#f1f2fa" font-size="33" font-weight="600">danek montage</text>
+<text x="30" y="123" fill="#aeb7cb" font-size="19">Портфолио видеомонтажёра, в котором движение задаёт ритм.</text>
+<text x="30" y="174" fill="#f2b99b" font-size="13" class="mono" letter-spacing="1">REACT   /   MOTION UI   /   RESPONSIVE</text>
+<path d="M813 30V178" stroke="#2b3041"/>
+<rect x="866" y="61" width="151" height="92" rx="8" fill="none" stroke="#f2b99b"/><path d="M866 81h151m-151 52h151m-132-72v20m25-20v20m25-20v20m25-20v20m25-20v20m-100 52v20m25-20v20m25-20v20m25-20v20m25-20v20" stroke="#f2b99b" opacity=".5"/><path class="pulse" d="m932 93 24 15-24 15Z" fill="#f2b99b"/>
+<path d="M1042 35h16v16m-16 0 16-16" fill="none" stroke="#adb5cb" stroke-width="1.8"/>
+
+</svg>

@@ -157,8 +157,11 @@ print('Generated 13 SVG assets.')
 readme_path = ROOT / 'README.md'
 readme = readme_path.read_text(encoding='utf-8')
 def version_asset(match):
-    path = match.group(1)
-    digest = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:12]
-    return f'src="{path}?v={digest}"'
+    path = re.sub(r'-[0-9a-f]{12}(?=\.svg$)', '', match.group(1))
+    data = (ROOT / path).read_bytes()
+    digest = hashlib.sha256(data).hexdigest()[:12]
+    versioned = path.removesuffix('.svg') + f'-{digest}.svg'
+    (ROOT / versioned).write_bytes(data)
+    return f'src="{versioned}"'
 readme = re.sub(r'src="(\./assets/[^"?]+\.svg)(?:\?[^\"]*)?"', version_asset, readme)
 readme_path.write_text(readme, encoding='utf-8')
