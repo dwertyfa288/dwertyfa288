@@ -6,7 +6,8 @@ import hashlib
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / 'assets'
-INK, PAPER, MUTED, LINE, ACCENT = '#111210', '#efeee7', '#979a8e', '#393c32', '#d1ed83'
+INK, PAPER, MUTED, LINE, ACCENT = '#101016', '#f4f0ee', '#aaa4b7', '#373240', '#ff947d'
+PALETTE = ['#81d6ee', '#baa0ff', '#ff947d', '#f7c783']
 PROJECTS = [
 ('Избранное', [
 ('TG for Astra', 'Telegram, который можно слушать. И отвечать голосом.', 'TYPESCRIPT / TELEGRAM / ASTRA', 'VOICE', 'https://github.com/dwertyfa288/dwertyfa-astra-tg', 'voice'),
@@ -29,29 +30,36 @@ def text(x, y, value, size=22, color=PAPER, weight=400, mono=False, extra=''):
     parts.append(f'<text x="{x}" y="{y}" font-size="{size}" fill="{color}" font-weight="{weight}" class="{"mono" if mono else "sans"}" {extra}>{escape(value)}</text>')
 def rule(y):
     parts.append(f'<path d="M40 {y}H1060" stroke="{LINE}"/>')
-def border(y, height):
-    parts.append(f'<rect x="40" y="{y}" width="1020" height="{height}" rx="3" fill="none" stroke="{LINE}"/>')
-    parts.append(f'<rect class="rim" pathLength="1000" x="40" y="{y}" width="1020" height="{height}" rx="3" fill="none" stroke="{ACCENT}"/>')
-def signal(x, y, kind):
+def border(y, height, color=ACCENT):
+    parts.append(f'<rect x="40" y="{y}" width="1020" height="{height}" rx="9" fill="#17151f" stroke="{LINE}"/>')
+    parts.append(f'<rect class="rim" pathLength="1000" x="40" y="{y}" width="1020" height="{height}" rx="9" fill="none" stroke="{color}"/>')
+    parts.append(f'<path d="M40 {y+20}v{height-40}" stroke="{color}" stroke-width="3"/>')
+def signal(x, y, kind, color=ACCENT):
+    parts.append(f'<g transform="translate({x+40} {y})"><g class="rotor"><rect x="-39" y="-39" width="78" height="78" rx="15" fill="none" stroke="{color}" opacity=".16"/></g></g>')
     if kind == 'voice':
         for i, h in enumerate([8,15,27,43,32,53,39,23,35,17,9]):
-            parts.append(f'<rect class="bar" style="animation-delay:-{i*.13}s" x="{x+i*8}" y="{y-h/2}" width="3" height="{h}" fill="{ACCENT}"/>')
+            parts.append(f'<rect class="bar" style="animation-delay:-{i*.13}s" x="{x+i*8}" y="{y-h/2}" width="4" height="{h}" rx="2" fill="{color}"/>')
     elif kind == 'network':
-        parts.append(f'<path d="M{x} {y}h84" stroke="{LINE}"/><path class="packet" d="M{x} {y}h84" stroke="{ACCENT}"/>')
+        parts.append(f'<path d="M{x} {y}h84" stroke="{LINE}"/><path class="packet" d="M{x} {y}h84" stroke="{color}"/>')
+        parts.append(f'<g transform="translate({x+42} {y})"><circle class="radar" r="15" fill="none" stroke="{color}"/></g>')
         for dx in (0,42,84):
             parts.append(f'<circle cx="{x+dx}" cy="{y}" r="4" fill="{INK}" stroke="{MUTED}"/>')
     else:
-        parts.append(f'<path d="m{x+9} {y-11} 11 11-11 11" fill="none" stroke="{MUTED}" stroke-width="2"/><path class="cursor" d="M{x+34} {y+11}h16" stroke="{ACCENT}" stroke-width="3"/>')
+        parts.append(f'<g class="lift"><path d="m{x+9} {y-11} 11 11-11 11m43-22-11 11 11 11" fill="none" stroke="{color}" stroke-width="2"/><path class="cursor" d="M{x+34} {y+11}h16" stroke="{color}" stroke-width="3"/></g>')
+
+parts.append('''<defs><linearGradient id="title-colors" x1="0" y1="0" x2="1" y2="1"><stop class="tone-a" stop-color="#ff947d"/><stop offset=".5" class="tone-b" stop-color="#baa0ff"/><stop offset="1" class="tone-c" stop-color="#81d6ee"/></linearGradient><clipPath id="hero-zone"><rect x="25" y="75" width="1050" height="256" rx="12"/></clipPath></defs>''')
+parts.append('<g clip-path="url(#hero-zone)"><g transform="translate(600 190)"><g class="sculpture"><ellipse rx="210" ry="73" fill="none" stroke="#baa0ff" stroke-width="24" opacity=".12"/><ellipse rx="130" ry="130" fill="none" stroke="#81d6ee" stroke-width="2" opacity=".25"/><path d="M-90-80 90-80 0 110Z" fill="none" stroke="#ff947d" stroke-width="3" opacity=".3"/></g></g></g>')
 
 text(40,43,'DWERTYFA / DEVELOPER',15,ACCENT,mono=True,extra='letter-spacing="1.5"')
 text(1060,43,'PERSONAL INDEX · 2026',14,MUTED,mono=True,extra='text-anchor="end"')
 rule(65)
-text(34,195,'dwertyfa.',118,PAPER,600,extra='letter-spacing="-6"')
+text(34,195,'dwertyfa.',118,'url(#title-colors)',600,extra='letter-spacing="-6"')
 text(40,254,'Создаю то, чем удобно пользоваться.',31)
 text(40,291,'Веб. Голосовые интерфейсы. Интеграции.',22,MUTED)
 avatar = base64.b64encode((ASSETS/'avatar.png').read_bytes()).decode()
 parts.append(f'<defs><clipPath id="portrait"><circle cx="941" cy="186" r="66"/></clipPath></defs><image x="875" y="120" width="132" height="132" href="data:image/jpeg;base64,{avatar}" clip-path="url(#portrait)" preserveAspectRatio="xMidYMid slice"/><circle cx="941" cy="186" r="77" fill="none" stroke="{LINE}"/><g transform="translate(941 186)"><g class="dial"><circle r="89" fill="none" stroke="{ACCENT}" stroke-width="1.5" stroke-dasharray="18 541"/><path d="M0-97v8M0 89v8M-97 0h8M89 0h8" stroke="{MUTED}"/></g></g>')
 text(941,310,'ЧЕЛОВЕК ЗА КОДОМ',12,MUTED,mono=True,extra='text-anchor="middle" letter-spacing="1.5"')
+parts.append('<g transform="translate(941 186)"><g class="orbit-two"><ellipse rx="120" ry="74" fill="none" stroke="#81d6ee" opacity=".6"/><circle cx="120" r="4" fill="#81d6ee"/></g><g class="orbit-three"><circle r="104" fill="none" stroke="#baa0ff" stroke-dasharray="4 19"/><circle cy="-104" r="5" fill="#ff947d"/></g><circle class="radar" r="79" fill="none" stroke="#ff947d"/></g>')
 rule(343)
 text(40,391,'ОБО МНЕ',14,MUTED,mono=True)
 text(40,436,'От выразительного интерфейса —',29)
@@ -65,21 +73,24 @@ text(62,603,'TypeScript / React / Next.js / Go / Rust / Tauri / Python',22,PAPER
 text(62,640,'Three.js · Astra Plugin SDK',19,MUTED,mono=True)
 y, number = 745, 0
 for index,(title,projects) in enumerate(PROJECTS,1):
-    text(40,y,f'0{index}',18,ACCENT,mono=True)
+    section_color = PALETTE[index-1]
+    text(40,y,f'0{index}',18,section_color,mono=True)
     text(107,y,title,34,PAPER,500)
+    parts.append(f'<path class="section-scan" d="M40 {y+26}h1020" stroke="{section_color}" stroke-width="2"/>')
     if title == 'SpherePrime':
         text(1060,y,'ПРОЕКТЫ ОРГАНИЗАЦИИ',13,MUTED,mono=True,extra='text-anchor="end"')
     rule(y+26)
     y += 55
     for name,description,tags,label,url,kind in projects:
         number += 1
-        border(y,143)
+        color = PALETTE[(number-1)%4]
+        border(y,143,color)
         text(62,y+38,f'{number:02}',15,MUTED,mono=True)
         text(115,y+43,name,31,PAPER,500)
         text(115,y+80,description,20,MUTED)
-        text(115,y+118,tags,13,ACCENT,mono=True,extra='letter-spacing=".8"')
+        text(115,y+118,tags,13,color,mono=True,extra='letter-spacing=".8"')
         text(1038,y+32,label,12,MUTED,mono=True,extra='text-anchor="end"')
-        signal(924,y+92,kind)
+        signal(924,y+92,kind,color)
         y += 161
     y += 64
 rule(y-17)
@@ -96,6 +107,18 @@ STYLE = '''
 @keyframes bar{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
 .packet{stroke-width:2;stroke-dasharray:8 76;animation:packet 3s linear infinite}@keyframes packet{to{stroke-dashoffset:-84}}
 .cursor{animation:cursor 1.4s steps(1,end) infinite}@keyframes cursor{0%,55%{opacity:1}56%,100%{opacity:0}}
+.tone-a{animation:tone-a 12s ease-in-out infinite}.tone-b{animation:tone-b 12s ease-in-out infinite}.tone-c{animation:tone-c 12s ease-in-out infinite}
+@keyframes tone-a{0%,100%{stop-color:#ff947d}50%{stop-color:#81d6ee}}
+@keyframes tone-b{0%,100%{stop-color:#baa0ff}50%{stop-color:#ff947d}}
+@keyframes tone-c{0%,100%{stop-color:#81d6ee}50%{stop-color:#baa0ff}}
+.sculpture{animation:sculpture 20s ease-in-out infinite}
+@keyframes sculpture{0%,100%{transform:rotate(-18deg) scale(.95)}50%{transform:rotate(32deg) scale(1.12)}}
+.orbit-two{animation:dial 16s linear infinite}.orbit-three{animation:dial 29s linear infinite reverse}
+.rotor{animation:dial 24s linear infinite}
+.radar{animation:radar 4s ease-out infinite}
+@keyframes radar{0%{transform:scale(.7);opacity:0}20%{opacity:.65}100%{transform:scale(1.45);opacity:0}}
+.lift{animation:lift 4s ease-in-out infinite}@keyframes lift{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.section-scan{stroke-dasharray:100 920;animation:scan 8s linear infinite}@keyframes scan{to{stroke-dashoffset:-1020}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 '''
 doc = f'<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="{height}" viewBox="0 0 1100 {height}" role="img" aria-labelledby="title"><title id="title">dwertyfa — веб, голосовые интерфейсы и интеграции. Избранные проекты и стек.</title><style>{STYLE}</style><rect width="1100" height="{height}" fill="{INK}"/>{"".join(parts)}</svg>'
