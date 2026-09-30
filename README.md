@@ -1,6 +1,6 @@
 <p align="center"><a href="https://t.me/dwertyfa">Telegram ↗</a> &nbsp; · &nbsp; <a href="https://dwertyfa288.github.io/dwertyfa/">Портфолио ↗</a> &nbsp; · &nbsp; <a href="https://github.com/SpherePrime">SpherePrime ↗</a></p>
 
-<img src="./assets/profile-57a51edcaf85.svg" width="100%" alt="dwertyfa — сайты, голосовые плагины и интеграции. Стек: TypeScript, React, Next.js, Go, Rust, Tauri, Python, Three.js и Astra Plugin SDK. Проекты и ссылки ниже." />
+<img src="./assets/profile-07d6a99548bd.svg" width="100%" alt="dwertyfa — сайты, голосовые плагины и интеграции. Стек: TypeScript, React, Next.js, Go, Rust, Tauri, Python, Three.js и Astra Plugin SDK. Проекты и ссылки ниже." />
 
 ### Открыть проекты
 

@@ -34,21 +34,34 @@ def border(y, height, color=ACCENT):
     parts.append(f'<rect x="40" y="{y}" width="1020" height="{height}" rx="9" fill="#17151f" stroke="{LINE}"/>')
     parts.append(f'<rect class="rim" pathLength="1000" x="40" y="{y}" width="1020" height="{height}" rx="9" fill="none" stroke="{color}"/>')
     parts.append(f'<path d="M40 {y+20}v{height-40}" stroke="{color}" stroke-width="3"/>')
-def signal(x, y, kind, color=ACCENT):
-    parts.append(f'<g transform="translate({x+40} {y})"><g class="rotor"><rect x="-39" y="-39" width="78" height="78" rx="15" fill="none" stroke="{color}" opacity=".16"/></g></g>')
-    if kind == 'voice':
-        for i, h in enumerate([8,15,27,43,32,53,39,23,35,17,9]):
-            parts.append(f'<rect class="bar" style="animation-delay:-{i*.13}s" x="{x+i*8}" y="{y-h/2}" width="4" height="{h}" rx="2" fill="{color}"/>')
-    elif kind == 'network':
-        parts.append(f'<path d="M{x} {y}h84" stroke="{LINE}"/><path class="packet" d="M{x} {y}h84" stroke="{color}"/>')
-        parts.append(f'<g transform="translate({x+42} {y})"><circle class="radar" r="15" fill="none" stroke="{color}"/></g>')
-        for dx in (0,42,84):
-            parts.append(f'<circle cx="{x+dx}" cy="{y}" r="4" fill="{INK}" stroke="{MUTED}"/>')
+def signal(x, y, name, color=ACCENT):
+    # Each illustration is centered in the same 96px column.
+    parts.append(f'<g transform="translate({x+42} {y-5})" fill="none" stroke="{color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">')
+    if name == 'TG for Astra':
+        parts.append('<g class="icon-float"><path d="m-42-10 82-27-23 76-24-25-17 13 3-27 42-27-51 20Z"/><path class="trail" d="M-44 37h38"/></g>')
+    elif name == 'Astra Interject':
+        parts.append('<rect x="-9" y="-33" width="18" height="39" rx="9"/><path d="M-20-9v6a20 20 0 0 0 40 0v-6M0 17v15m-13 0h26"/>')
+        for i,h in enumerate((12,27,18)):
+            parts.append(f'<path class="icon-wave" style="animation-delay:-{i*.3}s" d="M{29+i*8} {-h/2}v{h}"/>')
+    elif name == 'dwertyfa / portfolio':
+        parts.append('<rect x="-44" y="-31" width="88" height="63" rx="6"/><path d="M-44-13h88m-73-9h1m8 0h1m8 0h1m4 18-10 9 10 9m24-18 10 9-10 9"/><path class="cursor" d="M-6 21H6"/>')
+    elif name == 'Nova Prestige':
+        parts.append('<path d="M-39 34v-48l28-20v68m0-38 26-15v53m0-22 25-10v32M-46 34h93"/><path class="windows" d="M-29-8v30m10-38v38m19-19v19m8-24v24m18-8v8"/>')
+    elif name == 'Roxy Boost':
+        parts.append('<path d="M0-40 34-27V-2c0 17-14 31-34 42-20-11-34-25-34-42v-25Z"/><rect x="-12" y="-6" width="24" height="23" rx="4"/><path d="M-8-6v-9a8 8 0 0 1 16 0v9"/><circle class="lock-pulse" cy="4" r="2"/>')
+    elif name == 'danek montage':
+        parts.append('<rect x="-43" y="-20" width="86" height="54" rx="5"/><g class="clapper"><path d="M-43-20v-15h86v15Zm13-15-10 15m29-15-10 15m29-15-10 15m29-15-10 15"/></g><path class="play" d="m-7-7 20 14-20 14Z"/>')
+    elif name == 'Hey Ksusha':
+        parts.append('<path d="M0-26c-12-9-28-12-42-8v63c15-4 29-1 42 8 13-9 27-12 42-8v-63c-14-4-30-1-42 8ZM0-26v63"/><path d="M-32-17h17m-17 12h21m-21 12h21m24-24h17m-17 12h21"/><path class="bookmark" d="M25-34v24l7-4 7 4v-24"/>')
+    elif name == 'PrimeProxy':
+        parts.append('<rect x="-45" y="-18" width="22" height="36" rx="4"/><rect x="23" y="-18" width="22" height="36" rx="4"/><path d="M-23 0h46"/><path class="packet" d="M-23 0h46"/><circle r="8" fill="#17151f"/><path d="M-38 10h8m38 0h8"/>')
+    elif name == 'PrimeAI':
+        parts.append('<rect x="-24" y="-24" width="48" height="48" rx="8"/><path d="M-12-24v-12m12 12v-12m12 12v-12m-24 60v12m12-12v12m12-12v12M-24-12h-12m12 12h-12m12 12h-12m60-24h12m-12 12h12m-12 12h12"/><g class="ai-core"><path d="M0-12 12 0 0 12-12 0Z"/><circle r="3"/></g>')
     else:
-        parts.append(f'<g class="lift"><path d="m{x+9} {y-11} 11 11-11 11m43-22-11 11 11 11" fill="none" stroke="{color}" stroke-width="2"/><path class="cursor" d="M{x+34} {y+11}h16" stroke="{color}" stroke-width="3"/></g>')
+        parts.append('<rect x="-43" y="-31" width="86" height="63" rx="6"/><path d="M-43-13h86m-72-9h1m8 0h1m8 0h1m-20 23 11 10-11 10"/><path class="cursor" d="M-3 21h18"/>')
+    parts.append('</g>')
 
 parts.append('''<defs><linearGradient id="title-colors" x1="0" y1="0" x2="1" y2="1"><stop class="tone-a" stop-color="#ff947d"/><stop offset=".5" class="tone-b" stop-color="#baa0ff"/><stop offset="1" class="tone-c" stop-color="#81d6ee"/></linearGradient><clipPath id="hero-zone"><rect x="25" y="75" width="1050" height="256" rx="12"/></clipPath></defs>''')
-parts.append('<g clip-path="url(#hero-zone)"><g transform="translate(600 190)"><g class="sculpture"><ellipse rx="210" ry="73" fill="none" stroke="#baa0ff" stroke-width="24" opacity=".12"/><ellipse rx="130" ry="130" fill="none" stroke="#81d6ee" stroke-width="2" opacity=".25"/><path d="M-90-80 90-80 0 110Z" fill="none" stroke="#ff947d" stroke-width="3" opacity=".3"/></g></g></g>')
 
 text(40,43,'DWERTYFA / DEVELOPER',15,ACCENT,mono=True,extra='letter-spacing="1.5"')
 text(1060,43,'PERSONAL INDEX · 2026',14,MUTED,mono=True,extra='text-anchor="end"')
@@ -57,9 +70,13 @@ text(34,195,'dwertyfa.',118,'url(#title-colors)',600,extra='letter-spacing="-6"'
 text(40,254,'Создаю то, чем удобно пользоваться.',31)
 text(40,291,'Веб. Голосовые интерфейсы. Интеграции.',22,MUTED)
 avatar = base64.b64encode((ASSETS/'avatar.png').read_bytes()).decode()
-parts.append(f'<defs><clipPath id="portrait"><circle cx="941" cy="186" r="66"/></clipPath></defs><image x="875" y="120" width="132" height="132" href="data:image/jpeg;base64,{avatar}" clip-path="url(#portrait)" preserveAspectRatio="xMidYMid slice"/><circle cx="941" cy="186" r="77" fill="none" stroke="{LINE}"/><g transform="translate(941 186)"><g class="dial"><circle r="89" fill="none" stroke="{ACCENT}" stroke-width="1.5" stroke-dasharray="18 541"/><path d="M0-97v8M0 89v8M-97 0h8M89 0h8" stroke="{MUTED}"/></g></g>')
-text(941,310,'ЧЕЛОВЕК ЗА КОДОМ',12,MUTED,mono=True,extra='text-anchor="middle" letter-spacing="1.5"')
-parts.append('<g transform="translate(941 186)"><g class="orbit-two"><ellipse rx="120" ry="74" fill="none" stroke="#81d6ee" opacity=".6"/><circle cx="120" r="4" fill="#81d6ee"/></g><g class="orbit-three"><circle r="104" fill="none" stroke="#baa0ff" stroke-dasharray="4 19"/><circle cy="-104" r="5" fill="#ff947d"/></g><circle class="radar" r="79" fill="none" stroke="#ff947d"/></g>')
+parts.append('<defs><clipPath id="portrait"><circle cx="941" cy="186" r="63"/></clipPath><radialGradient id="portrait-halo"><stop stop-color="#baa0ff" stop-opacity=".2"/><stop offset="1" stop-color="#baa0ff" stop-opacity="0"/></radialGradient></defs>')
+parts.append('<circle cx="941" cy="186" r="116" fill="url(#portrait-halo)"/>')
+for i,(angle,color) in enumerate(((-32,'#81d6ee'),(32,'#baa0ff'),(90,'#ff947d'))):
+    parts.append(f'<g transform="translate(941 186) rotate({angle})"><ellipse rx="112" ry="49" fill="none" stroke="{color}" opacity=".25"/><ellipse class="orbital-flow" style="animation-duration:{9+i*3}s" pathLength="1000" rx="112" ry="49" fill="none" stroke="{color}" stroke-width="2.2"/><circle class="satellite" style="animation-duration:{9+i*3}s" r="3.5" fill="{color}" stroke="none"/></g>')
+parts.append(f'<circle cx="941" cy="186" r="67" fill="#17151f" stroke="#baa0ff" stroke-width="1.5"/><image x="878" y="123" width="126" height="126" href="data:image/jpeg;base64,{avatar}" clip-path="url(#portrait)" preserveAspectRatio="xMidYMid slice"/>')
+text(941,329,'ЧЕЛОВЕК ЗА КОДОМ',12,MUTED,mono=True,extra='text-anchor="middle" letter-spacing="1.5"')
+
 rule(343)
 text(40,391,'ОБО МНЕ',14,MUTED,mono=True)
 text(40,436,'От выразительного интерфейса —',29)
@@ -90,7 +107,7 @@ for index,(title,projects) in enumerate(PROJECTS,1):
         text(115,y+80,description,20,MUTED)
         text(115,y+118,tags,13,color,mono=True,extra='letter-spacing=".8"')
         text(1038,y+32,label,12,MUTED,mono=True,extra='text-anchor="end"')
-        signal(924,y+92,kind,color)
+        signal(924,y+88,name,color)
         y += 161
     y += 64
 rule(y-17)
@@ -119,6 +136,15 @@ STYLE = '''
 @keyframes radar{0%{transform:scale(.7);opacity:0}20%{opacity:.65}100%{transform:scale(1.45);opacity:0}}
 .lift{animation:lift 4s ease-in-out infinite}@keyframes lift{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .section-scan{stroke-dasharray:100 920;animation:scan 8s linear infinite}@keyframes scan{to{stroke-dashoffset:-1020}}
+.icon-float{animation:icon-float 4s ease-in-out infinite}@keyframes icon-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.icon-wave{transform-box:fill-box;transform-origin:center;animation:bar 1.5s ease-in-out infinite}
+.windows,.lock-pulse,.play,.bookmark{animation:detail 3.5s ease-in-out infinite}@keyframes detail{0%,100%{opacity:.4}50%{opacity:1}}
+.ai-core{animation:dial 18s linear infinite}
+.clapper{transform-origin:-43px -20px;animation:clapper 5s ease-in-out infinite}@keyframes clapper{0%,75%,100%{transform:rotate(0)}35%{transform:rotate(-8deg)}}
+.trail{stroke-dasharray:10 28;animation:trail 2s linear infinite}@keyframes trail{to{stroke-dashoffset:-38}}
+.orbital-flow{stroke-dasharray:120 880;animation:rim 9s linear infinite}
+.satellite{offset-path:path('M112 0 A112 49 0 1 1 -112 0 A112 49 0 1 1 112 0');offset-distance:0%;animation:satellite 9s linear infinite}
+@keyframes satellite{to{offset-distance:100%}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
 '''
 doc = f'<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="{height}" viewBox="0 0 1100 {height}" role="img" aria-labelledby="title"><title id="title">dwertyfa — веб, голосовые интерфейсы и интеграции. Избранные проекты и стек.</title><style>{STYLE}</style><rect width="1100" height="{height}" fill="{INK}"/>{"".join(parts)}</svg>'
