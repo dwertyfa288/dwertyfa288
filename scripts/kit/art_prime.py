@@ -109,3 +109,60 @@ def proxy(x, y, w, h):
 {label(lock_x, cy + 58, 'mtproto ⇄ websocket', GREY, anchor='middle', size=10)}
 {label(lx, cy + 46, 'tg', DIM, anchor='middle', size=9)}{label(rx, cy + 46, 'dc', DIM, anchor='middle', size=9)}'''
     return svg, css
+
+
+DESK_CYCLE = 12
+PROJECTS = ['RoxyVPN', 'astra-tg', 'Prime CLI', 'portfolio']
+
+
+def desktop(x, y, w, h):
+    side = 128
+    cx = x + side
+    css = ''
+    rows = []
+    for index, name in enumerate(PROJECTS):
+        rows.append(text(x + 30, y + 78 + index * 26, name, 12.5, PAPER if index == 2 else GREY, mono=True))
+    frames = [f'{100 * i / len(PROJECTS):.1f}%,{100 * i / len(PROJECTS) + 20:.1f}%{{transform:translateY({i * 26}px)}}' for i in range(len(PROJECTS))]
+    frames.append('100%{transform:translateY(0)}')
+    css += f'@keyframes dpick{{{"".join(frames)}}}.dpick{{animation:dpick 9s cubic-bezier(.77,0,.18,1) infinite}}'
+    activity = [('read', 'src/app/router.ts', 10), ('lsp', 'diagnostics · 0 errors', 20), ('edit', 'src/app/auth.ts', 30)]
+    lines = []
+    for index, (tag, value, start) in enumerate(activity):
+        css += appear(f'da{index}', start, DESK_CYCLE)
+        lines.append(f'<g class="da{index}">{text(cx + 20, y + 114 + index * 22, tag.upper(), 10, DIM, 700, mono=True, spacing=1.2)}'
+                     f'{text(cx + 70, y + 114 + index * 22, value, 12, GREY, mono=True)}</g>')
+    css += appear('dapprove', 40, DESK_CYCLE)
+    css += f'@keyframes dclick{{0%,52%{{fill:{INK}}}54%,100%{{fill:{SIGNAL}}}}}.dclick{{animation:dclick {DESK_CYCLE}s steps(1,end) infinite}}'
+    css += f'@keyframes dtext{{0%,52%{{fill:{SIGNAL}}}54%,100%{{fill:{INK}}}}}.dtext{{animation:dtext {DESK_CYCLE}s steps(1,end) infinite}}'
+    css += appear('ddiff', 58, DESK_CYCLE)
+    diff_x = x + w - 150
+    diff = ''.join(
+        f'<rect x="{diff_x + 14}" y="{y + 70 + k * 16}" width="{[90, 70, 104, 56, 84, 96, 62][k]}" height="6" fill="{SIGNAL if k in (2, 4) else (DIM if k == 3 else GREY)}" opacity="{1 if k in (2, 4) else .7}"/>'
+        + (text(diff_x + 4, y + 77 + k * 16, '+' if k in (2, 4) else ('−' if k == 3 else ' '), 10, SIGNAL if k in (2, 4) else DIM, 700, mono=True))
+        for k in range(7))
+    approve_y = y + 182
+    svg = f'''
+<path d="M{x} {y + 34}H{x + w}M{cx} {y + 34}V{y + h}M{diff_x} {y + 34}V{y + h - 54}" stroke="{LINE}"/>
+{label(x + 18, y + 22, 'prime desktop', PAPER, size=10.5)}
+{label(x + w - 18, y + 22, 'tauri · react · go engine', DIM, anchor='end', size=9.5)}
+{label(x + 18, y + 54, 'проекты', DIM, size=9.5)}
+<g class="dpick"><rect x="{x + 18}" y="{y + 70}" width="4" height="12" fill="{SIGNAL}"/></g>
+{"".join(rows)}
+{label(x + 18, y + h - 22, 'ssh · automations', DIM, size=9)}
+<rect x="{cx + 20}" y="{y + 52}" width="{diff_x - cx - 40}" height="28" fill="none" stroke="{GREY}"/>
+{text(cx + 32, y + 70.5, 'добавь вход через Telegram', 12.5, PAPER)}
+{"".join(lines)}
+<g class="dapprove"><rect x="{cx + 20}" y="{approve_y - 18}" width="{diff_x - cx - 40}" height="34" fill="none" stroke="{SIGNAL}"/>
+{text(cx + 32, approve_y + 3, 'Применить правки?', 12.5, PAPER)}
+<rect class="dclick" x="{diff_x - 100}" y="{approve_y - 11}" width="76" height="20" fill="{INK}" stroke="{SIGNAL}"/>
+{text(diff_x - 62, approve_y + 3, 'разрешить', 10.5, SIGNAL, 700, anchor='middle', mono=True, cls='dtext')}</g>
+{label(diff_x + 14, y + 54, 'diff', DIM, size=9.5)}
+<g class="ddiff">{diff}</g>
+<path d="M{cx} {y + h - 54}H{x + w}" stroke="{LINE}"/>
+{text(cx + 20, y + h - 22, '›', 15, GREY, 700, mono=True)}
+<rect class="blink" x="{cx + 38}" y="{y + h - 34}" width="8" height="15" fill="{PAPER}"/>
+<rect x="{x + w - 46}" y="{y + h - 40}" width="28" height="28" fill="none" stroke="{PAPER}"/>
+<rect x="{x + w - 35}" y="{y + h - 34}" width="6" height="11" rx="3" fill="none" stroke="{PAPER}" stroke-width="1.4"/>
+<path d="M{x + w - 39} {y + h - 26}A7 7 0 0 0 {x + w - 25} {y + h - 26}M{x + w - 32} {y + h - 19}V{y + h - 16}" fill="none" stroke="{PAPER}" stroke-width="1.4"/>
+{"".join(f'<rect class="fbb eq" style="{delay(-(k * .23) % 1.5)};animation-duration:{1 + (k % 4) * .2:.1f}s" x="{x + w - 150 + k * 6}" y="{y + h - 34}" width="3" height="16" fill="{SIGNAL}"/>' for k in range(16))}'''
+    return svg, css

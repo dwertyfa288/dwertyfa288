@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/section-prime-382b541b3a8e.svg" width="100%" alt="02 — SpherePrime. Инструменты для разработчиков и AI: терминал, роутинг, прокси." />
+  <img src="./assets/section-prime-bea4a654f425.svg" width="100%" alt="02 — SpherePrime. Инструменты для разработчиков и AI: терминал, десктоп, роутинг, прокси." />
 </p>
 
 <p align="center">
@@ -30,26 +30,30 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/SpherePrime/PrimeAi"><img src="./assets/primeai-475fd2897649.svg" width="49%" alt="PrimeAI — AI-провайдер для Astra с автоматической маршрутизацией через Router API. Открыть репозиторий SpherePrime." /></a>
-  <a href="https://github.com/SpherePrime/PrimeProxy"><img src="./assets/proxy-0c449fbdad9a.svg" width="49%" alt="PrimeProxy — локальный MTProto-прокси для Telegram с WebSocket-транспортом. Rust. Открыть репозиторий SpherePrime." /></a>
+  <a href="https://github.com/SpherePrime/CLI/tree/main/desktop"><img src="./assets/desktop-d4d72142fac0.svg" width="100%" alt="Prime Desktop — десктоп-воркспейс Prime для Windows и Linux на Rust/Tauri и React: проекты, чаты, диффы, терминалы, SSH, MCP и голос. Открыть исходники." /></a>
 </p>
 
 <p align="center">
-  <img src="./assets/section-web-a6355f0a49cd.svg" width="100%" alt="03 — Веб. Сайты с характером — от лендингов до целых продуктов." />
+  <a href="https://github.com/SpherePrime/PrimeAi"><img src="./assets/primeai-1dec8da34fbc.svg" width="49%" alt="PrimeAI — AI-провайдер для Astra с автоматической маршрутизацией через Router API. Открыть репозиторий SpherePrime." /></a>
+  <a href="https://github.com/SpherePrime/PrimeProxy"><img src="./assets/proxy-9cdb641c204c.svg" width="49%" alt="PrimeProxy — локальный MTProto-прокси для Telegram с WebSocket-транспортом. Rust. Открыть репозиторий SpherePrime." /></a>
 </p>
 
 <p align="center">
-  <a href="https://dwertyfa288.github.io/dwertyfa/"><img src="./assets/portfolio-121b28be23e7.svg" width="100%" alt="Портфолио dwertyfa — интерактивное портфолио на Next.js, React и Three.js. Открыть сайт." /></a>
+  <img src="./assets/section-web-82b77a69f181.svg" width="100%" alt="03 — Веб. Сайты с характером — от лендингов до целых продуктов." />
 </p>
 
 <p align="center">
-  <a href="https://novaprestige.ru/"><img src="./assets/nova-cf6f9b80e27f.svg" width="49%" alt="Nova Prestige — промо-сайт жилого дома: атмосфера, адаптив и анимации. Открыть сайт." /></a>
-  <a href="https://roxyvpn.ru/"><img src="./assets/roxy-bad2dec4b59a.svg" width="49%" alt="Roxy Boost — VPN-продукт: инфраструктура, приложение и сайт. Открыть сайт." /></a>
+  <a href="https://dwertyfa288.github.io/dwertyfa/"><img src="./assets/portfolio-0e1ede80970d.svg" width="100%" alt="Портфолио dwertyfa — интерактивное портфолио на Next.js, React и Three.js. Открыть сайт." /></a>
 </p>
 
 <p align="center">
-  <a href="https://fazedanek-hub.github.io/danekmontage/"><img src="./assets/danek-7a98edd158bc.svg" width="49%" alt="danek montage — портфолио видеомонтажёра с акцентом на движение. Открыть сайт." /></a>
-  <a href="https://heyksusha.ru/intensive"><img src="./assets/ksusha-1f997cb24d90.svg" width="49%" alt="Hey Ksusha — лендинг интенсива с записью и платёжной интеграцией. Открыть сайт." /></a>
+  <a href="https://novaprestige.ru/"><img src="./assets/nova-7ece0ee5188a.svg" width="49%" alt="Nova Prestige — промо-сайт жилого дома: атмосфера, адаптив и анимации. Открыть сайт." /></a>
+  <a href="https://roxyvpn.ru/"><img src="./assets/roxy-fa967c1a08f7.svg" width="49%" alt="Roxy Boost — VPN-продукт: инфраструктура, приложение и сайт. Открыть сайт." /></a>
+</p>
+
+<p align="center">
+  <a href="https://fazedanek-hub.github.io/danekmontage/"><img src="./assets/danek-0f812e0c0905.svg" width="49%" alt="danek montage — портфолио видеомонтажёра с акцентом на движение. Открыть сайт." /></a>
+  <a href="https://heyksusha.ru/intensive"><img src="./assets/ksusha-e21701f21bfd.svg" width="49%" alt="Hey Ksusha — лендинг интенсива с записью и платёжной интеграцией. Открыть сайт." /></a>
 </p>
 
 <p align="center">

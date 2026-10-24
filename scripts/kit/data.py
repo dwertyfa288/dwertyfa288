@@ -25,7 +25,7 @@ LINKS = [
 
 SECTIONS = {
     'voice': ('01', 'Голос и Astra', 'Плагины, которые слушают, говорят и держат контекст разговора.', '02 ПРОЕКТА'),
-    'prime': ('02', 'SpherePrime', 'Инструменты для разработчиков и AI: терминал, роутинг, прокси.', '03 ПРОЕКТА'),
+    'prime': ('02', 'SpherePrime', 'Инструменты для разработчиков и AI: терминал, десктоп, роутинг, прокси.', '04 ПРОЕКТА'),
     'web': ('03', 'Веб', 'Сайты с характером — от лендингов до целых продуктов.', '05 ПРОЕКТОВ'),
 }
 
@@ -49,6 +49,13 @@ PROJECTS = {
         cta='репозиторий', url_label='github.com/SpherePrime/CLI',
         url='https://github.com/SpherePrime/CLI',
         alt='Prime CLI — агентный AI-ассистент для кода в терминале: любые модели, MCP, LSP. Go. Открыть репозиторий SpherePrime.'),
+    'desktop': dict(
+        kind='SPHEREPRIME · TAURI', title='Prime Desktop', art='desktop',
+        lines=['Десктоп-воркспейс Prime для Windows и Linux:', 'проекты, чаты, апрувы, диффы, терминалы,', 'SSH, автоматизации, MCP/LSP/Skills и голос.'],
+        chips=['Rust', 'Tauri', 'React', 'Go engine'],
+        cta='репозиторий', url_label='github.com/SpherePrime/CLI/desktop',
+        url='https://github.com/SpherePrime/CLI/tree/main/desktop',
+        alt='Prime Desktop — десктоп-воркспейс Prime для Windows и Linux на Rust/Tauri и React: проекты, чаты, диффы, терминалы, SSH, MCP и голос. Открыть исходники.'),
     'primeai': dict(
         kind='SPHEREPRIME · TS', title='PrimeAI', art='router',
         lines=['AI-провайдер для Astra: Router API сам выбирает', 'маршрут, повторяет запросы и знает vision-модели.'],
@@ -102,6 +109,7 @@ LAYOUT = [
     ('pair', 'telegram', 'interject'),
     ('section', 'prime'),
     ('wide', 'cli'),
+    ('wide', 'desktop'),
     ('pair', 'primeai', 'proxy'),
     ('section', 'web'),
     ('wide', 'portfolio'),

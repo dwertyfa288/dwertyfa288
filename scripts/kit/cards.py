@@ -9,6 +9,7 @@ ARTS = {
     'telegram': art_voice.telegram,
     'interject': art_voice.interject,
     'cli': art_prime.cli,
+    'desktop': art_prime.desktop,
     'router': art_prime.router,
     'proxy': art_prime.proxy,
     'portfolio': art_web.portfolio,
