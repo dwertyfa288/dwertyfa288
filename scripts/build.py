@@ -37,7 +37,10 @@ def project_card(writer, key, number, phase, wide=False):
     project = PROJECTS[key]
     svg = cards.wide(project, number, phase) if wide else cards.half(project, number, phase)
     width = '100%' if wide else '49%'
-    return readme.linked(project['url'], writer.save(key, svg), project['alt'], width)
+    src = writer.save(key, svg)
+    if not project['url']:
+        return readme.image(src, project['alt'], width)
+    return readme.linked(project['url'], src, project['alt'], width)
 
 
 def build():

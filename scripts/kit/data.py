@@ -12,7 +12,7 @@ LANGUAGES = [
 ]
 HIGHLIGHTS = [
     (LANGUAGE_COUNT, '', 'языков', 'Python · Java · TS · Rust · Go'),
-    (5, '', 'живых сайтов', 'лендинги · продукты · портфолио'),
+    (7, '', 'живых сайтов', 'лендинги · бизнес · портфолио'),
     (3, '', 'плагина для Astra', 'TG · Interject · PrimeAI'),
 ]
 STATS_META = 'github · октябрь 2026'
@@ -24,9 +24,9 @@ LINKS = [
 ]
 
 SECTIONS = {
-    'voice': ('01', 'Голос и Astra', 'Плагины, которые слушают, говорят и держат контекст разговора.', '02 ПРОЕКТА'),
+    'voice': ('01', 'Голос и Telegram', 'Плагины для Astra, Telegram-боты и мини-приложения.', '03 ПРОЕКТА'),
     'prime': ('02', 'SpherePrime', 'Инструменты для разработчиков и AI: терминал, десктоп, роутинг, прокси.', '04 ПРОЕКТА'),
-    'web': ('03', 'Веб', 'Сайты с характером — от лендингов до целых продуктов.', '05 ПРОЕКТОВ'),
+    'web': ('03', 'Веб', 'Сайты с характером — от лендингов до целых продуктов.', '07 ПРОЕКТОВ'),
 }
 
 PROJECTS = {
@@ -42,6 +42,25 @@ PROJECTS = {
         chips=['TypeScript', 'getUserMedia', 'VAD'],
         url='https://github.com/dwertyfa288/astra-interject',
         alt='Astra Interject — продолжение диалога после ответа Astra без повторного триггерного слова. Открыть репозиторий.'),
+    'designer': dict(
+        kind='TELEGRAM MINI APP · AI', title='Мой Дизайнер', art='designer',
+        lines=['AI-дизайн интерьеров прямо в Telegram:', 'фото комнаты → готовый проект, анализ ремонта', 'и подбор товаров под выбранный стиль.'],
+        chips=['Python', 'aiogram', 'FastAPI', 'React'],
+        cta='', url_label='telegram bot + mini app',
+        url=None,
+        alt='Мой Дизайнер — Telegram-бот и Mini App для AI-дизайна интерьеров, анализа ремонта и подбора товаров. Python, aiogram, FastAPI, React.'),
+    'hostel': dict(
+        kind='САЙТ · ХОСТЕЛ', title='Хостел Пушкин', art='hostel',
+        lines=['Редизайн по брендбуку, новости с админкой,', 'галереи номеров и бронь через TravelLine.'],
+        chips=['PHP', 'Brand', 'Admin', 'TravelLine'],
+        url='https://hostel-ekaterinburg.ru/',
+        alt='Хостел Пушкин — редизайн сайта хостела в Екатеринбурге: фирменный стиль, новости с админкой, галереи номеров, бронирование TravelLine. Открыть сайт.'),
+    'lotos': dict(
+        kind='САЙТ · САЛОН', title='ЛОТОС', art='lotos',
+        lines=['Общий сайт салона: главная-развилка,', 'барбершоп и лазерная эпиляция на одном домене.'],
+        chips=['Node.js', 'Static', 'SEO', 'Analytics'],
+        url='https://lotos-polevskoy.ru/',
+        alt='ЛОТОС — общий сайт салона в Полевском: барбершоп и лазерная эпиляция на одном домене. Открыть сайт.'),
     'cli': dict(
         kind='SPHEREPRIME · GO', title='Prime CLI', art='cli',
         lines=['Агентный AI-ассистент для кода в терминале.', 'Любые модели, MCP и LSP-контекст, сессии,', '12 дизайнов интерфейса и голосовой ввод.'],
@@ -107,6 +126,7 @@ LAYOUT = [
     ('stats',),
     ('section', 'voice'),
     ('pair', 'telegram', 'interject'),
+    ('wide', 'designer'),
     ('section', 'prime'),
     ('wide', 'cli'),
     ('wide', 'desktop'),
@@ -114,6 +134,7 @@ LAYOUT = [
     ('section', 'web'),
     ('wide', 'portfolio'),
     ('pair', 'nova', 'roxy'),
+    ('pair', 'hostel', 'lotos'),
     ('pair', 'danek', 'ksusha'),
     ('footer',),
 ]

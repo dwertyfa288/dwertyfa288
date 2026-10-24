@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="540" height="392" viewBox="0 0 540 392" role="img" aria-labelledby="t">
+<title id="t">ЛОТОС — общий сайт салона в Полевском: барбершоп и лазерная эпиляция на одном домене. Открыть сайт.</title>
+<defs>
+ <clipPath id="clip"><rect width="540" height="392" rx="6"/></clipPath>
+ <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M0 .5H2M.5 0V2" stroke="#ecebe5" stroke-opacity=".14"/></pattern>
+ 
+</defs>
+<style>
+text{font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,system-ui,sans-serif}
+.mono{font-family:'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,'Courier New',monospace}
+.fb{transform-box:fill-box;transform-origin:center}
+.fbl{transform-box:fill-box;transform-origin:left center}
+.fbb{transform-box:fill-box;transform-origin:center bottom}
+.pivot{transform-box:view-box;transform-origin:0 0}
+
+@keyframes reveal{from{transform:translateY(105%)}to{transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes eq{0%,100%{transform:scaleY(.2)}50%{transform:scaleY(1)}}
+@keyframes draw{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes marquee{to{transform:translateX(var(--shift))}}
+@keyframes flicker{0%,100%{opacity:.12}40%{opacity:.12}42%{opacity:1}78%{opacity:1}80%{opacity:.12}}
+@keyframes pulse{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes ripple{0%{transform:scale(.7);opacity:0}15%{opacity:.6}100%{transform:scale(1.8);opacity:0}}
+@keyframes register{0%{transform:translateX(0)}100%{transform:translateX(var(--run))}}
+
+.reveal{animation:reveal 1.1s cubic-bezier(.77,0,.18,1) both}
+.rise{animation:rise .9s cubic-bezier(.19,1,.22,1) both}
+.fade{animation:fade 1.2s ease both}
+.blink{animation:blink 1.1s steps(1,end) infinite}
+.eq{animation:eq 1.5s cubic-bezier(.45,0,.55,1) infinite}
+.draw{stroke-dasharray:100;animation:draw 1.8s cubic-bezier(.65,0,.35,1) both}
+.grow{animation:grow 1.4s cubic-bezier(.77,0,.18,1) both}
+.flicker{animation:flicker 7s steps(1,end) infinite}
+.pulse{animation:pulse 2.6s ease-in-out infinite}
+.spin{animation:spin 40s linear infinite}
+.ripple{animation:ripple 3.4s cubic-bezier(.2,.6,.3,1) infinite}
+.register{animation:register 10s cubic-bezier(.77,0,.18,1) infinite alternate}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+@keyframes gate{0%,40%{transform:translateX(0)}50%,90%{transform:translateX(234px)}100%{transform:translateX(0)}}.gate{animation:gate 6s cubic-bezier(.77,0,.18,1) infinite}@keyframes snip{0%,100%{transform:rotate(0)}50%{transform:rotate(-14deg)}}.snip{animation:snip 1.2s ease-in-out infinite}@keyframes snip2{0%,100%{transform:rotate(0)}50%{transform:rotate(14deg)}}.snip2{animation:snip2 1.2s ease-in-out infinite}</style>
+<rect width="540" height="392" rx="6" fill="#121211"/><path d="M12 22V12H22M12 370V380H22M528 22V12H518M528 370V380H518" fill="none" stroke="#57554f" stroke-width="1.2"/><path d="M28 50H512" stroke="#2d2c29"/><g style="--run:428px"><rect class="register" style="animation-delay:-0.90s" x="28" y="49" width="56" height="2" fill="#ff5b14"/></g><text x="28.0" y="36.0" font-size="11" fill="#8d8b85" font-weight="600" letter-spacing="1.6" class="mono">12 — САЙТ · САЛОН</text><rect x=".5" y=".5" width="539" height="391" rx="6" fill="none" stroke="#2d2c29"/><g transform="translate(502 32)"><path d="M-7 7L7 -7M-2.8000000000000003 -7H7V2.8000000000000003" fill="none" stroke="#ecebe5" stroke-width="1.6" stroke-linecap="square"/></g><rect x="28" y="66" width="484" height="170" fill="#0e0e0d"/><clipPath id="plate"><rect x="28" y="66" width="484" height="170"/></clipPath><g clip-path="url(#plate)"><rect x="28" y="66" width="484" height="170" fill="url(#grid)"/>
+<path d="M270.0 100C261.0 92.8 264.6 82 270.0 82C275.4 82 279.0 92.8 270.0 100Z" fill="none" stroke="#ecebe5" transform="rotate(-56 270.0 100)"/><path d="M270.0 100C261.0 92.8 264.6 82 270.0 82C275.4 82 279.0 92.8 270.0 100Z" fill="none" stroke="#ecebe5" transform="rotate(-28 270.0 100)"/><path d="M270.0 100C261.0 92.8 264.6 82 270.0 82C275.4 82 279.0 92.8 270.0 100Z" fill="none" stroke="#ecebe5" transform="rotate(0 270.0 100)"/><path d="M270.0 100C261.0 92.8 264.6 82 270.0 82C275.4 82 279.0 92.8 270.0 100Z" fill="none" stroke="#ecebe5" transform="rotate(28 270.0 100)"/><path d="M270.0 100C261.0 92.8 264.6 82 270.0 82C275.4 82 279.0 92.8 270.0 100Z" fill="none" stroke="#ecebe5" transform="rotate(56 270.0 100)"/><path d="M252.0 100H288.0" stroke="#ecebe5"/>
+<text x="270.0" y="228.0" font-size="9.5" fill="#8d8b85" font-weight="600" text-anchor="middle" letter-spacing="1.6" class="mono">ЛОТОС · ПОЛЕВСКОЙ</text>
+<path d="M270.0 106V158.0M238 158.0H302" stroke="#2d2c29"/>
+<rect x="68" y="108" width="170" height="100" fill="#0e0e0d" stroke="#8d8b85"/>
+<rect x="302" y="108" width="170" height="100" fill="#0e0e0d" stroke="#8d8b85"/>
+<g transform="translate(153.0 152)">
+ <g class="pivot snip"><path d="M0 0L-34 -10" stroke="#ecebe5" stroke-width="1.6"/><circle cx="18" cy="8" r="7" fill="none" stroke="#ecebe5" stroke-width="1.4"/><path d="M0 0L13 5" stroke="#ecebe5" stroke-width="1.4"/></g>
+ <g class="pivot snip2"><path d="M0 0L-34 10" stroke="#ecebe5" stroke-width="1.6"/><circle cx="18" cy="-8" r="7" fill="none" stroke="#ecebe5" stroke-width="1.4"/><path d="M0 0L13 -5" stroke="#ecebe5" stroke-width="1.4"/></g>
+ <circle r="2.4" fill="#ff5b14"/>
+</g>
+<path class="pulse" style="animation-delay:0.00s;animation-duration:1.4s" d="M352 126V178" stroke="#ecebe5" stroke-width="1"/><path class="pulse" style="animation-delay:-0.30s;animation-duration:1.4s" d="M366 126V178" stroke="#ecebe5" stroke-width="1"/><path class="pulse" style="animation-delay:-0.60s;animation-duration:1.4s" d="M380 126V178" stroke="#ff5b14" stroke-width="2"/><path class="pulse" style="animation-delay:-0.90s;animation-duration:1.4s" d="M394 126V178" stroke="#ecebe5" stroke-width="1"/><path class="pulse" style="animation-delay:-1.20s;animation-duration:1.4s" d="M408 126V178" stroke="#ecebe5" stroke-width="1"/><path class="pulse" style="animation-delay:-1.50s;animation-duration:1.4s" d="M422 126V178" stroke="#ecebe5" stroke-width="1"/>
+<text x="80.0" y="196.0" font-size="10" fill="#ecebe5" font-weight="600" letter-spacing="1.6" class="mono">/BARBER</text>
+<text x="314.0" y="196.0" font-size="10" fill="#ecebe5" font-weight="600" letter-spacing="1.6" class="mono">/LASER</text>
+<g class="gate"><rect x="62" y="102" width="182" height="112" fill="none" stroke="#ff5b14" stroke-width="1.6"/>
+<path d="M62 114V102H74M232 214H244V202" stroke="#ff5b14" stroke-width="3" fill="none"/></g></g><rect x="28" y="66" width="484" height="170" fill="none" stroke="#2d2c29"/><text x="512.0" y="254.0" font-size="10" fill="#8d8b85" font-weight="600" text-anchor="end" letter-spacing="1.6" class="mono">FIG. 12</text><clipPath id="ttl"><rect x="24" y="256" width="420" height="42"/></clipPath><g clip-path="url(#ttl)"><g class="reveal" style="animation-delay:0.15s"><text x="28.0" y="288.0" font-size="32" fill="#ecebe5" font-weight="800" letter-spacing="-0.96">ЛОТОС</text></g></g><g class="rise" style="animation-delay:0.35s"><text x="28.0" y="316.0" font-size="15" fill="#8d8b85">Общий сайт салона: главная-развилка,</text></g><g class="rise" style="animation-delay:0.45s"><text x="28.0" y="338.0" font-size="15" fill="#8d8b85">барбершоп и лазерная эпиляция на одном домене.</text></g><path d="M28 342H512" stroke="#2d2c29"/><g class="fade" style="animation-delay:0.60s"><text x="28.0" y="366.0" font-size="12" fill="#8d8b85" class="mono">Node.js</text><text x="88.4" y="366.0" font-size="12" fill="#ff5b14" class="mono">/</text><text x="105.6" y="366.0" font-size="12" fill="#8d8b85" class="mono">Static</text><text x="158.8" y="366.0" font-size="12" fill="#ff5b14" class="mono">/</text><text x="176.0" y="366.0" font-size="12" fill="#8d8b85" class="mono">SEO</text><text x="207.6" y="366.0" font-size="12" fill="#ff5b14" class="mono">/</text><text x="224.8" y="366.0" font-size="12" fill="#8d8b85" class="mono">Analytics</text></g>
+</svg>

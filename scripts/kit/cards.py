@@ -1,4 +1,4 @@
-from . import art_voice, art_prime, art_web
+from . import art_voice, art_prime, art_web, art_clients
 from .canvas import document, frame, text, label, delay, tags, arrow
 from .theme import FULL_WIDTH, HALF_WIDTH, PAPER, GREY, LINE, SIGNAL, INK
 
@@ -17,6 +17,9 @@ ARTS = {
     'globe': art_web.globe,
     'timeline': art_web.timeline,
     'landing': art_web.landing,
+    'designer': art_clients.designer,
+    'hostel': art_clients.hostel,
+    'lotos': art_clients.lotos,
 }
 
 
@@ -48,6 +51,14 @@ def half(project, number, phase):
     return document(HALF_WIDTH, HALF_HEIGHT, body, project['alt'], css=css)
 
 
+def cta(caption):
+    if not caption:
+        return ''
+    return (f'<g class="rise" style="{delay(.9)}"><rect x="28" y="{WIDE_HEIGHT - 82}" width="200" height="44" fill="none" stroke="{PAPER}"/>'
+            + label(46, WIDE_HEIGHT - 55, caption, PAPER, size=12)
+            + f'<g transform="translate(208 {WIDE_HEIGHT - 60})">{arrow(0, 0, 6, SIGNAL, 1.8)}</g></g>')
+
+
 def wide(project, number, phase):
     art, css = plate(556, 66, FULL_WIDTH - 584, WIDE_HEIGHT - 110, project, number)
     lines = ''.join(f'<g class="rise" style="{delay(.4 + i * .1)}">{text(28, 214 + i * 26, line, 17, GREY)}</g>' for i, line in enumerate(project['lines']))
@@ -57,7 +68,5 @@ def wide(project, number, phase):
             + lines
             + f'<path d="M28 300H500" stroke="{LINE}"/>'
             + tags(28, 328, project['chips'], size=13)
-            + f'<g class="rise" style="{delay(.9)}"><rect x="28" y="{WIDE_HEIGHT - 82}" width="200" height="44" fill="none" stroke="{PAPER}"/>'
-            + label(46, WIDE_HEIGHT - 55, project['cta'], PAPER, size=12)
-            + f'<g transform="translate(208 {WIDE_HEIGHT - 60})">{arrow(0, 0, 6, SIGNAL, 1.8)}</g></g>')
+            + cta(project['cta']))
     return document(FULL_WIDTH, WIDE_HEIGHT, body, project['alt'], css=css)
