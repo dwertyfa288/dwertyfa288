@@ -1,55 +1,57 @@
 <p align="center">
-  <img src="./assets/hero-228448290cdf.svg" width="100%" alt="dwertyfa — full-stack, голосовые интерфейсы и интеграции. От идеи до живого продукта." />
+  <img src="./assets/hero-0c91d7e009e4.svg" width="100%" alt="dwertyfa — full-stack: сайты, голосовые интерфейсы, плагины для Astra и интеграции." />
 </p>
 
 <p align="center">
-  <a href="https://t.me/dwertyfa">Telegram ↗</a> &nbsp;·&nbsp;
-  <a href="https://dwertyfa288.github.io/dwertyfa/">Портфолио ↗</a> &nbsp;·&nbsp;
-  <a href="https://github.com/SpherePrime">SpherePrime ↗</a>
+  <a href="https://t.me/dwertyfa"><img src="./assets/link-telegram-e0d5b5bb93b9.svg" width="32%" alt="Telegram — @dwertyfa" /></a>
+  <a href="https://dwertyfa288.github.io/dwertyfa/"><img src="./assets/link-portfolio-f3d045832966.svg" width="32%" alt="Портфолио — dwertyfa288.github.io/dwertyfa" /></a>
+  <a href="https://github.com/SpherePrime"><img src="./assets/link-sphereprime-64f52b202233.svg" width="32%" alt="SpherePrime — github.com/SpherePrime" /></a>
 </p>
 
 <p align="center">
-  <img src="./assets/about-efa26bef97da.svg" width="100%" alt="Привет, я dwertyfa. Создаю сайты, плагины и интеграции. Веб: 3D и анимации. Голос: Astra и Telegram. Мой стек: TypeScript, React, Next.js, Go, Rust, Tauri и Python. Также использую Three.js и Astra Plugin SDK." />
+  <img src="./assets/stats-d5455e970b54.svg" width="100%" alt="99+ репозиториев, языки и проекты в цифрах." />
 </p>
-
-<br />
 
 <p align="center">
-  <img src="./assets/sec-featured-c1c5a1bc4040.svg" width="100%" alt="Раздел 01 — Избранное." />
+  <img src="./assets/section-voice-4f2de0645583.svg" width="100%" alt="01 — Голос и Astra. Плагины, которые слушают, говорят и держат контекст разговора." />
 </p>
-
-<a href="https://github.com/dwertyfa288/dwertyfa-astra-tg"><img src="./assets/telegram-ddb6795e15f5.svg" width="100%" alt="TG for Astra — Telegram голосом: озвучивание сообщений, прослушивание голосовых и диктовка ответов. Открыть репозиторий." /></a>
-
-<a href="https://github.com/dwertyfa288/astra-interject"><img src="./assets/interject-9e454fd95f6a.svg" width="100%" alt="Astra Interject — продолжение диалога после ответа Astra без повторного триггерного слова. Открыть репозиторий." /></a>
-
-<a href="https://dwertyfa288.github.io/dwertyfa/"><img src="./assets/portfolio-567accbdad4a.svg" width="100%" alt="dwertyfa portfolio — интерактивное портфолио на Next.js, React и Three.js. Открыть репозиторий." /></a>
-
-<br />
 
 <p align="center">
-  <img src="./assets/sec-web-d80fa662c155.svg" width="100%" alt="Раздел 02 — Веб-проекты." />
+  <a href="https://github.com/dwertyfa288/dwertyfa-astra-tg"><img src="./assets/telegram-6daba1a987a0.svg" width="49%" alt="TG for Astra — Telegram голосом: озвучка сообщений, голосовые и ответы под диктовку. Открыть репозиторий." /></a>
+  <a href="https://github.com/dwertyfa288/astra-interject"><img src="./assets/interject-4a361397d30e.svg" width="49%" alt="Astra Interject — продолжение диалога после ответа Astra без повторного триггерного слова. Открыть репозиторий." /></a>
 </p>
-
-<a href="https://novaprestige.ru/"><img src="./assets/nova-15c243f103e2.svg" width="100%" alt="Nova Prestige — промо-сайт жилого дома: атмосфера, адаптив и анимации. Открыть сайт." /></a>
-
-<a href="https://roxyvpn.ru/"><img src="./assets/roxy-2c40f4848c4e.svg" width="100%" alt="Roxy Boost — VPN-продукт: инфраструктура, приложение и сайт. Открыть сайт." /></a>
-
-<a href="https://fazedanek-hub.github.io/danekmontage/"><img src="./assets/danek-8105b6d015bb.svg" width="100%" alt="danek montage — портфолио видеомонтажёра с акцентом на движение. Открыть сайт." /></a>
-
-<a href="https://heyksusha.ru/intensive"><img src="./assets/ksusha-5f3e0026749b.svg" width="100%" alt="Hey Ksusha — лендинг интенсива с записью и платёжной интеграцией. Открыть сайт." /></a>
-
-<br />
 
 <p align="center">
-  <img src="./assets/sec-org-6c3723398b51.svg" width="100%" alt="Раздел 03 — SpherePrime." />
+  <img src="./assets/section-prime-382b541b3a8e.svg" width="100%" alt="02 — SpherePrime. Инструменты для разработчиков и AI: терминал, роутинг, прокси." />
 </p>
 
-<a href="https://github.com/SpherePrime/PrimeProxy"><img src="./assets/primeproxy-9613de77d44d.svg" width="100%" alt="PrimeProxy — локальный MTProto-прокси для Telegram с WebSocket-транспортом. Python. Открыть репозиторий SpherePrime." /></a>
+<p align="center">
+  <a href="https://github.com/SpherePrime/CLI"><img src="./assets/cli-871c12041d87.svg" width="100%" alt="Prime CLI — агентный AI-ассистент для кода в терминале: любые модели, MCP, LSP. Go. Открыть репозиторий SpherePrime." /></a>
+</p>
 
-<a href="https://github.com/SpherePrime/PrimeAi"><img src="./assets/primeai-a59affb3b61b.svg" width="100%" alt="PrimeAI — AI-провайдер для Astra с маршрутизацией запросов через Router API. TypeScript. Открыть репозиторий SpherePrime." /></a>
+<p align="center">
+  <a href="https://github.com/SpherePrime/PrimeAi"><img src="./assets/primeai-475fd2897649.svg" width="49%" alt="PrimeAI — AI-провайдер для Astra с автоматической маршрутизацией через Router API. Открыть репозиторий SpherePrime." /></a>
+  <a href="https://github.com/SpherePrime/PrimeProxy"><img src="./assets/proxy-0c449fbdad9a.svg" width="49%" alt="PrimeProxy — локальный MTProto-прокси для Telegram с WebSocket-транспортом. Rust. Открыть репозиторий SpherePrime." /></a>
+</p>
 
-<a href="https://github.com/SpherePrime/CLI"><img src="./assets/primecli-cc20b9b57c3d.svg" width="100%" alt="Prime CLI — терминальный AI-ассистент для работы с кодом, MCP и несколькими моделями. Go. Открыть репозиторий SpherePrime." /></a>
+<p align="center">
+  <img src="./assets/section-web-a6355f0a49cd.svg" width="100%" alt="03 — Веб. Сайты с характером — от лендингов до целых продуктов." />
+</p>
 
-<br />
+<p align="center">
+  <a href="https://dwertyfa288.github.io/dwertyfa/"><img src="./assets/portfolio-121b28be23e7.svg" width="100%" alt="Портфолио dwertyfa — интерактивное портфолио на Next.js, React и Three.js. Открыть сайт." /></a>
+</p>
 
-<a href="https://t.me/dwertyfa"><img src="./assets/footer-111bc87fdf95.svg" width="100%" alt="Есть идея? Дадим ей форму. Написать dwertyfa в Telegram: t.me/dwertyfa" /></a>
+<p align="center">
+  <a href="https://novaprestige.ru/"><img src="./assets/nova-cf6f9b80e27f.svg" width="49%" alt="Nova Prestige — промо-сайт жилого дома: атмосфера, адаптив и анимации. Открыть сайт." /></a>
+  <a href="https://roxyvpn.ru/"><img src="./assets/roxy-bad2dec4b59a.svg" width="49%" alt="Roxy Boost — VPN-продукт: инфраструктура, приложение и сайт. Открыть сайт." /></a>
+</p>
+
+<p align="center">
+  <a href="https://fazedanek-hub.github.io/danekmontage/"><img src="./assets/danek-7a98edd158bc.svg" width="49%" alt="danek montage — портфолио видеомонтажёра с акцентом на движение. Открыть сайт." /></a>
+  <a href="https://heyksusha.ru/intensive"><img src="./assets/ksusha-1f997cb24d90.svg" width="49%" alt="Hey Ksusha — лендинг интенсива с записью и платёжной интеграцией. Открыть сайт." /></a>
+</p>
+
+<p align="center">
+  <a href="https://t.me/dwertyfa"><img src="./assets/footer-942c61c20040.svg" width="100%" alt="Есть идея? Соберём из неё живой продукт. Написать в Telegram." /></a>
+</p>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="540" height="392" viewBox="0 0 540 392" role="img" aria-labelledby="t">
+<title id="t">Hey Ksusha — лендинг интенсива с записью и платёжной интеграцией. Открыть сайт.</title>
+<defs>
+ <clipPath id="clip"><rect width="540" height="392" rx="6"/></clipPath>
+ <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M0 .5H2M.5 0V2" stroke="#ecebe5" stroke-opacity=".14"/></pattern>
+ 
+</defs>
+<style>
+text{font-family:'Segoe UI','Helvetica Neue',Helvetica,Arial,system-ui,sans-serif}
+.mono{font-family:'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,'Courier New',monospace}
+.fb{transform-box:fill-box;transform-origin:center}
+.fbl{transform-box:fill-box;transform-origin:left center}
+.fbb{transform-box:fill-box;transform-origin:center bottom}
+.pivot{transform-box:view-box;transform-origin:0 0}
+
+@keyframes reveal{from{transform:translateY(105%)}to{transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes eq{0%,100%{transform:scaleY(.2)}50%{transform:scaleY(1)}}
+@keyframes draw{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes marquee{to{transform:translateX(var(--shift))}}
+@keyframes flicker{0%,100%{opacity:.12}40%{opacity:.12}42%{opacity:1}78%{opacity:1}80%{opacity:.12}}
+@keyframes pulse{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes ripple{0%{transform:scale(.7);opacity:0}15%{opacity:.6}100%{transform:scale(1.8);opacity:0}}
+@keyframes register{0%{transform:translateX(0)}100%{transform:translateX(var(--run))}}
+
+.reveal{animation:reveal 1.1s cubic-bezier(.77,0,.18,1) both}
+.rise{animation:rise .9s cubic-bezier(.19,1,.22,1) both}
+.fade{animation:fade 1.2s ease both}
+.blink{animation:blink 1.1s steps(1,end) infinite}
+.eq{animation:eq 1.5s cubic-bezier(.45,0,.55,1) infinite}
+.draw{stroke-dasharray:100;animation:draw 1.8s cubic-bezier(.65,0,.35,1) both}
+.grow{animation:grow 1.4s cubic-bezier(.77,0,.18,1) both}
+.flicker{animation:flicker 7s steps(1,end) infinite}
+.pulse{animation:pulse 2.6s ease-in-out infinite}
+.spin{animation:spin 40s linear infinite}
+.ripple{animation:ripple 3.4s cubic-bezier(.2,.6,.3,1) infinite}
+.register{animation:register 10s cubic-bezier(.77,0,.18,1) infinite alternate}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+@keyframes cursor{0%{transform:translate(170px,60px);opacity:0}8%{opacity:1}36%{transform:translate(0,0)}40%{transform:translate(0,0) scale(.82)}44%,82%{transform:translate(0,0);opacity:1}94%,100%{transform:translate(170px,60px);opacity:0}}.cursor{animation:cursor 7s cubic-bezier(.65,0,.35,1) infinite}@keyframes press{0%,38%,46%,100%{transform:scale(1)}41%{transform:scale(.94)}}.press{animation:press 7s ease infinite}@keyframes toast{0%,48%{opacity:0;transform:translateY(-10px)}53%,85%{opacity:1;transform:none}90%,100%{opacity:0;transform:none}}.toast{animation:toast 7s cubic-bezier(.2,.8,.2,1) infinite}</style>
+<rect width="540" height="392" rx="6" fill="#121211"/><path d="M12 22V12H22M12 370V380H22M528 22V12H518M528 370V380H518" fill="none" stroke="#57554f" stroke-width="1.2"/><path d="M28 50H512" stroke="#2d2c29"/><g style="--run:428px"><rect class="register" style="animation-delay:-8.30s" x="28" y="49" width="56" height="2" fill="#ff5b14"/></g><text x="28.0" y="36.0" font-size="11" fill="#8d8b85" font-weight="600" letter-spacing="1.6" class="mono">10 — ЛЕНДИНГ · ИНТЕНСИВ</text><rect x=".5" y=".5" width="539" height="391" rx="6" fill="none" stroke="#2d2c29"/><g transform="translate(502 32)"><path d="M-7 7L7 -7M-2.8000000000000003 -7H7V2.8000000000000003" fill="none" stroke="#ecebe5" stroke-width="1.6" stroke-linecap="square"/></g><rect x="28" y="66" width="484" height="170" fill="#0e0e0d"/><clipPath id="plate"><rect x="28" y="66" width="484" height="170"/></clipPath><g clip-path="url(#plate)"><rect x="28" y="66" width="484" height="170" fill="url(#grid)"/>
+<rect x="50" y="82" width="290" height="174" fill="#0e0e0d" stroke="#8d8b85"/>
+<path d="M50 106H340" stroke="#2d2c29"/>
+<text x="62.0" y="98.0" font-size="9.5" fill="#57554f" font-weight="600" letter-spacing="1.6" class="mono">HEYKSUSHA.RU/INTENSIVE</text>
+<text x="74.0" y="128.0" font-size="10" fill="#ff5b14" font-weight="600" letter-spacing="1.6" class="mono">ИНТЕНСИВ</text>
+<text x="74.0" y="158.0" font-size="24" fill="#ecebe5" font-weight="800" letter-spacing="-0.5">Hey, Ksusha</text>
+<rect x="74" y="166" width="150" height="3" fill="#57554f"/>
+<g class="fb press"><rect x="74" y="180" width="124" height="32" fill="#ff5b14"/>
+<text x="136.0" y="201.0" font-size="13" fill="#0e0e0d" font-weight="700" text-anchor="middle">Записаться</text></g>
+<circle cx="286" cy="154" r="30" fill="none" stroke="#ecebe5"/>
+<circle cx="286" cy="146" r="9" fill="none" stroke="#ecebe5"/>
+<path d="M270 174C272 160 300 160 302 174" fill="none" stroke="#ecebe5"/>
+<g class="toast"><rect x="316" y="136" width="176" height="44" fill="#0e0e0d" stroke="#ecebe5"/>
+<rect x="316" y="136" width="4" height="44" fill="#ff5b14"/>
+<text x="332.0" y="155.0" font-size="13" fill="#ecebe5" font-weight="700">Оплата прошла</text><text x="332.0" y="171.0" font-size="9.5" fill="#8d8b85" font-weight="600" letter-spacing="1.6" class="mono">МЕСТО ЗАБРОНИРОВАНО</text></g>
+<g transform="translate(154 196)"><g class="cursor"><path d="M0 0L0 19L5 14L9 23L12.5 21.5L8.5 13L15 13Z" fill="#ecebe5" stroke="#0e0e0d" stroke-width="1.2" stroke-linejoin="round"/></g></g></g><rect x="28" y="66" width="484" height="170" fill="none" stroke="#2d2c29"/><text x="512.0" y="254.0" font-size="10" fill="#8d8b85" font-weight="600" text-anchor="end" letter-spacing="1.6" class="mono">FIG. 10</text><clipPath id="ttl"><rect x="24" y="256" width="420" height="42"/></clipPath><g clip-path="url(#ttl)"><g class="reveal" style="animation-delay:0.15s"><text x="28.0" y="288.0" font-size="32" fill="#ecebe5" font-weight="800" letter-spacing="-0.96">Hey Ksusha</text></g></g><g class="rise" style="animation-delay:0.35s"><text x="28.0" y="316.0" font-size="15" fill="#8d8b85">Лендинг интенсива с записью</text></g><g class="rise" style="animation-delay:0.45s"><text x="28.0" y="338.0" font-size="15" fill="#8d8b85">и платёжной интеграцией.</text></g><path d="M28 342H512" stroke="#2d2c29"/><g class="fade" style="animation-delay:0.60s"><text x="28.0" y="366.0" font-size="12" fill="#8d8b85" class="mono">Landing</text><text x="88.4" y="366.0" font-size="12" fill="#ff5b14" class="mono">/</text><text x="105.6" y="366.0" font-size="12" fill="#8d8b85" class="mono">Payments</text><text x="173.2" y="366.0" font-size="12" fill="#ff5b14" class="mono">/</text><text x="190.4" y="366.0" font-size="12" fill="#8d8b85" class="mono">Forms</text></g>
+</svg>
